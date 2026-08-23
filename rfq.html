@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request B2B Export Quotation & Sample Pack | AGROVIA ORGANIC</title>
+    <meta name="description" content="Interactive Request for Quotation (RFQ) portal for Agrovia Organic. Calculate container volume, request sample packs, and receive FOB/CIF rates within 24 hours.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f2f9f3',
+                            100: '#e2f2e5',
+                            200: '#c5e5cc',
+                            500: '#1b6b38',
+                            600: '#14532b',
+                            700: '#104323',
+                            800: '#0c341b',
+                            900: '#072211',
+                            950: '#04150a',
+                            gold: '#d99e2b',
+                            'gold-light': '#fdf6e7',
+                            amber: '#c07d17',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .hero-pattern {
+            background-color: #072211;
+            background-image: radial-gradient(#1b6b38 0.75px, transparent 0.75px), radial-gradient(#1b6b38 0.75px, #072211 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .glass-dark {
+            background: rgba(12, 52, 27, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(217, 158, 43, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Notice Bar -->
+    <div class="bg-brand-900 text-slate-300 text-xs py-2 px-4 border-b border-brand-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+                <span class="flex items-center gap-1.5 text-brand-200">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                    <span>Govt. Registered Exporter (ERC & EPB Certified)</span>
+                </span>
+                <span class="hidden md:inline text-brand-700">|</span>
+                <span class="flex items-center gap-1.5">
+                    <i data-lucide="anchor" class="w-3.5 h-3.5 text-brand-gold"></i>
+                    <span>Ports: Chattogram Port (BDCGP) & Dhaka Air (DAC)</span>
+                </span>
+                <span class="hidden md:inline text-brand-700">|</span>
+                <span class="flex items-center gap-1.5 text-emerald-300">
+                    <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>SGS & ISO 22000 Lab Standards Ready</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="rfq.html" class="text-brand-gold hover:text-white transition font-medium flex items-center gap-1">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                    <span>B2B RFQ Fast-Track</span>
+                </a>
+                <span class="text-brand-700">|</span>
+                <span class="flex items-center gap-1 text-slate-300">
+                    <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+                    <span>Markets: UK, USA, EU, UAE, KSA, CA, MY, SG</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-gold shadow-md group-hover:scale-105 transition-transform">
+                        <i data-lucide="sprout" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-extrabold text-2xl tracking-tight text-brand-900 block leading-tight">AGROVIA</span>
+                        <span class="text-[10px] tracking-[0.25em] font-bold text-brand-gold uppercase block">ORGANIC &bull; EXPORT AGENCY</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Home</a>
+<a href="products.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Commodities & Specs</a>
+<a href="compliance.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Incoterms & Logistics</a>
+<a href="rfq.html" class="text-brand-700 font-bold text-sm border-b-2 border-brand-600 pb-1">RFQ & Samples</a>
+
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20would%20like%20to%20inquire%20about%20agricultural%20commodity%20export." target="_blank" class="px-3.5 py-2 rounded-lg border border-emerald-600 text-emerald-700 hover:bg-emerald-50 text-xs font-semibold flex items-center gap-1.5 transition">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                        <span>WhatsApp Desk</span>
+                    </a>
+                    <a href="rfq.html" class="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition flex items-center gap-2">
+                        <span>Request B2B Quote</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+            <a href="index.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Home</a>
+<a href="products.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Commodities & Specs</a>
+<a href="compliance.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Incoterms & Logistics</a>
+<a href="rfq.html" class="block font-bold text-brand-700 py-1.5">RFQ & Samples</a>
+
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <a href="rfq.html" class="w-full py-2.5 text-center bg-brand-600 text-white font-bold text-xs uppercase tracking-wider rounded-lg">Request B2B Quote</a>
+                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-2.5 text-center border border-emerald-600 text-emerald-700 font-bold text-xs rounded-lg">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Header Hero -->
+    <div class="bg-brand-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest border border-brand-gold/30">
+                Direct B2B Procurement
+            </span>
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold">Request an Official Export Quotation</h1>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+                Submit your target commodity, volume, and destination port. Our International Trade Desk will respond with a formal Proforma Invoice (PI) and laboratory COA within 24 hours.
+            </p>
+        </div>
+    </div>
+
+    <!-- RFQ Container -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-xl space-y-8">
+            
+            <form id="dedicated-rfq-form" class="space-y-6" onsubmit="handleDedicatedRFQ(event)">
+                
+                <div class="border-b border-slate-100 pb-4">
+                    <h3 class="font-serif text-xl font-bold text-slate-900">1. Commodity & Volume Specifications</h3>
+                    <p class="text-xs text-slate-500">Specify your target items and container or sample volume.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Select Commodity *</label>
+                        <select id="rfq-product-select" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                            <option value="">-- Choose Target Commodity --</option>
+                            <option value="Sundarbans Wild Raw Mangrove Honey">Sundarbans Wild Raw Mangrove Honey (0.000% C4 Sugar)</option>
+                            <option value="Chinigura & GI Tulshimala Aromatic Rice">Chinigura & GI Tulshimala Aromatic Rice</option>
+                            <option value="Pesticide-Free Solar Dried Fish (Shukti)">Pesticide-Free Solar Dried Fish (Shukti)</option>
+                            <option value="Northern Char Peanuts & Pure Peanut Butter">Northern Char Peanuts & Pure Peanut Butter</option>
+                            <option value="Himsagar Mango (GI) & Jackfruit (Air Cargo)">Himsagar Mango (GI) & Jackfruit (Air Cargo)</option>
+                            <option value="Consolidated Multi-Commodity FCL / LCL">Consolidated Multi-Commodity FCL / LCL</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Estimated Volume & Unit *</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="number" id="rfq-qty-input" required min="1" placeholder="e.g. 10" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                            <select id="rfq-unit-select" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                                <option value="Metric Tons (MT)">Metric Tons (MT)</option>
+                                <option value="20ft FCL Container">20ft FCL Container</option>
+                                <option value="40ft HQ Container">40ft HQ Container</option>
+                                <option value="Kilograms (kg)">Kilograms (kg)</option>
+                                <option value="Commercial Sample Pack">Commercial Sample Pack</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Packaging Requirement *</label>
+                        <select id="rfq-pack-select" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                            <option value="Bulk Format (Drums / 25kg PP / 50kg Bags)">Bulk Format (Drums / 25kg PP / 50kg Bags)</option>
+                            <option value="Retail Branded (Agrovia Organic Label)">Retail Branded (Agrovia Organic Label)</option>
+                            <option value="Private Labeling / OEM Packaging">Private Labeling / OEM Packaging</option>
+                            <option value="Vacuum Foil Pouches">Vacuum Foil Pouches</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Desired Incoterm *</label>
+                        <select id="rfq-inco-select" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                            <option value="FOB Chattogram Port (BDCGP)">FOB Chattogram Port (BDCGP)</option>
+                            <option value="CIF Destination Discharge Port">CIF Destination Discharge Port</option>
+                            <option value="CFR Destination Discharge Port">CFR Destination Discharge Port</option>
+                            <option value="FOB Dhaka Airport (DAC) Air Cargo">FOB Dhaka Airport (DAC) Air Cargo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="border-b border-slate-100 pb-4 pt-4">
+                    <h3 class="font-serif text-xl font-bold text-slate-900">2. Destination & Importer Details</h3>
+                    <p class="text-xs text-slate-500">Tell us where to ship and how to reach your trade desk.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Destination Port & Country *</label>
+                        <input type="text" id="rfq-dest-input" required placeholder="e.g. London Gateway, UK / Jebel Ali, UAE / New York, USA" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Company / Entity Name *</label>
+                        <input type="text" id="rfq-company-input" required placeholder="e.g. Global Foods Trading Ltd" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Contact Name *</label>
+                        <input type="text" id="rfq-name-input" required placeholder="Your Full Name" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Corporate Email *</label>
+                        <input type="email" id="rfq-email-input" required placeholder="procurement@company.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">WhatsApp / Phone *</label>
+                        <input type="text" id="rfq-phone-input" required placeholder="+44 7000 000000" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Special Lab Requirements, Target Delivery Date or Notes</label>
+                    <textarea id="rfq-notes-input" rows="3" placeholder="e.g. Please provide batch COA for C4 sugar test; target delivery late next month." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-brand-600 transition"></textarea>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                        <span>Direct processing by Founder Pranto Sarker & Trade Desk.</span>
+                    </div>
+
+                    <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2">
+                        <span>Submit Official RFQ</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="dedicated-rfq-success" class="hidden p-6 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-950 space-y-3">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600"></i>
+                    <h4 class="font-bold text-base">RFQ Logged Successfully!</h4>
+                </div>
+                <p class="text-xs text-slate-700">Thank you for submitting your procurement requirements. You can now immediately reach our International Trade Director on WhatsApp with your pre-filled inquiry.</p>
+                <div class="pt-2">
+                    <a id="dedicated-wa-link" href="#" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Forward RFQ Directly to WhatsApp (+880 1700-000000)</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const prod = urlParams.get('product');
+        if (prod) {
+            const select = document.getElementById('rfq-product-select');
+            if (select) {
+                if (prod === 'honey') select.value = 'Sundarbans Wild Raw Mangrove Honey';
+                if (prod === 'rice') select.value = 'Chinigura & GI Tulshimala Aromatic Rice';
+                if (prod === 'shukti') select.value = 'Pesticide-Free Solar Dried Fish (Shukti)';
+                if (prod === 'peanuts') select.value = 'Northern Char Peanuts & Pure Peanut Butter';
+                if (prod === 'mango') select.value = 'Himsagar Mango (GI) & Jackfruit (Air Cargo)';
+            }
+        }
+
+        function handleDedicatedRFQ(event) {
+            event.preventDefault();
+            const commodity = document.getElementById('rfq-product-select').value;
+            const qty = document.getElementById('rfq-qty-input').value;
+            const unit = document.getElementById('rfq-unit-select').value;
+            const pack = document.getElementById('rfq-pack-select').value;
+            const incoterm = document.getElementById('rfq-inco-select').value;
+            const dest = document.getElementById('rfq-dest-input').value;
+            const company = document.getElementById('rfq-company-input').value;
+            const name = document.getElementById('rfq-name-input').value;
+            const email = document.getElementById('rfq-email-input').value;
+            const phone = document.getElementById('rfq-phone-input').value;
+            const notes = document.getElementById('rfq-notes-input').value;
+
+            const text = *AGROVIA ORGANIC - B2B EXPORT RFQ*%0A%0A +
+                *Commodity:* %0A +
+                *Volume:*  %0A +
+                *Packaging:* %0A +
+                *Incoterm:* %0A +
+                *Destination:* %0A +
+                *Company:* %0A +
+                *Contact:*  ( / )%0A +
+                *Notes:* ;
+
+            const waUrl = https://wa.me/8801700000000?text=;
+            document.getElementById('dedicated-wa-link').href = waUrl;
+            document.getElementById('dedicated-rfq-success').classList.remove('hidden');
+            document.getElementById('dedicated-rfq-success').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Global Footer -->
+    <footer class="bg-brand-950 text-slate-400 border-t border-brand-900 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-brand-900">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-brand-800 flex items-center justify-center text-brand-gold font-bold">
+                            <i data-lucide="sprout" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif font-extrabold text-xl tracking-tight text-white block leading-tight">AGROVIA</span>
+                            <span class="text-[9px] tracking-[0.25em] font-bold text-brand-gold uppercase block">ORGANIC &bull; EXPORT AGENCY</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
+                        Agrovia Organic is Bangladesh’s dedicated agricultural commodity and specialty food export agency, bridging local agro-heritage with international lab standards and trade banking compliance.
+                    </p>
+                    <div class="pt-2 space-y-1 text-xs text-slate-400">
+                        <div><strong>Founder:</strong> Pranto Sarker</div>
+                        <div><strong>Origin & Sourcing:</strong> Bangladesh 🇧🇩</div>
+                        <div><strong>Export Legal Status:</strong> EPB / ERC / Trade License Registered</div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200">Export Commodities</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="products.html#honey" class="hover:text-brand-gold transition">Sundarbans Mangrove Honey</a></li>
+                        <li><a href="products.html#rice" class="hover:text-brand-gold transition">Chinigura & GI Tulshimala Rice</a></li>
+                        <li><a href="products.html#fish" class="hover:text-brand-gold transition">Pesticide-Free Dried Fish (Shukti)</a></li>
+                        <li><a href="products.html#peanuts" class="hover:text-brand-gold transition">Northern Char Peanuts & Butter</a></li>
+                        <li><a href="products.html#fruits" class="hover:text-brand-gold transition">Himsagar Mango (GI) & Jackfruit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Trade & Banking -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200">Trade & Compliance</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="compliance.html" class="hover:text-brand-gold transition">Lab COA & Quality Testing</a></li>
+                        <li><a href="trade-logistics.html" class="hover:text-brand-gold transition">Incoterms (FOB, CFR, CIF)</a></li>
+                        <li><a href="trade-logistics.html#banking" class="hover:text-brand-gold transition">Sight LC (UCP 600) & CAD</a></li>
+                        <li><a href="trade-logistics.html#ports" class="hover:text-brand-gold transition">Chattogram & DAC Air Gateways</a></li>
+                        <li><a href="rfq.html" class="hover:text-brand-gold transition">B2B Sample Order Protocol</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Target Markets & Desk -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200">Export Desk</h4>
+                    <div class="text-xs space-y-2">
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-gold"></i>
+                            <span>Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-gold"></i>
+                            <span>export@agroviaorganic.com</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+                            <span>Trade Desk WhatsApp: +880 1700-000000</span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <span class="inline-block px-2.5 py-1 rounded bg-brand-900 border border-brand-800 text-[10px] text-brand-200 font-mono">
+                            TIMEZONE: GMT+6 (BST)
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <div>
+                    &copy; 2026 AGROVIA ORGANIC. All Rights Reserved. Founded by Pranto Sarker.
+                </div>
+                <div class="flex items-center gap-6">
+                    <span class="hover:text-slate-300">ISO 22000 & HACCP Framework</span>
+                    <span>&bull;</span>
+                    <span class="hover:text-slate-300">Bangladesh Bank EXP Compliance</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Common Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body></html>
