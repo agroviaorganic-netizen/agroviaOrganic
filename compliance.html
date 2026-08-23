@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Standards & Quality Assurance Architecture | AGROVIA ORGANIC</title>
+    <meta name="description" content="Laboratory verification parameters, Certificate of Analysis (COA) workflow, international food safety standards (ISO 22000, HACCP, FDA, Halal) for Agrovia Organic.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f2f9f3',
+                            100: '#e2f2e5',
+                            200: '#c5e5cc',
+                            500: '#1b6b38',
+                            600: '#14532b',
+                            700: '#104323',
+                            800: '#0c341b',
+                            900: '#072211',
+                            950: '#04150a',
+                            gold: '#d99e2b',
+                            'gold-light': '#fdf6e7',
+                            amber: '#c07d17',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .hero-pattern {
+            background-color: #072211;
+            background-image: radial-gradient(#1b6b38 0.75px, transparent 0.75px), radial-gradient(#1b6b38 0.75px, #072211 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .glass-dark {
+            background: rgba(12, 52, 27, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(217, 158, 43, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Notice Bar -->
+    <div class="bg-brand-900 text-slate-300 text-xs py-2 px-4 border-b border-brand-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+                <span class="flex items-center gap-1.5 text-brand-200">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                    <span>Govt. Registered Exporter (ERC & EPB Certified)</span>
+                </span>
+                <span class="hidden md:inline text-brand-700">|</span>
+                <span class="flex items-center gap-1.5">
+                    <i data-lucide="anchor" class="w-3.5 h-3.5 text-brand-gold"></i>
+                    <span>Ports: Chattogram Port (BDCGP) & Dhaka Air (DAC)</span>
+                </span>
+                <span class="hidden md:inline text-brand-700">|</span>
+                <span class="flex items-center gap-1.5 text-emerald-300">
+                    <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>SGS & ISO 22000 Lab Standards Ready</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="rfq.html" class="text-brand-gold hover:text-white transition font-medium flex items-center gap-1">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                    <span>B2B RFQ Fast-Track</span>
+                </a>
+                <span class="text-brand-700">|</span>
+                <span class="flex items-center gap-1 text-slate-300">
+                    <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+                    <span>Markets: UK, USA, EU, UAE, KSA, CA, MY, SG</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-gold shadow-md group-hover:scale-105 transition-transform">
+                        <i data-lucide="sprout" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-extrabold text-2xl tracking-tight text-brand-900 block leading-tight">AGROVIA</span>
+                        <span class="text-[10px] tracking-[0.25em] font-bold text-brand-gold uppercase block">ORGANIC &bull; EXPORT AGENCY</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Home</a>
+<a href="products.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Commodities & Specs</a>
+<a href="compliance.html" class="text-brand-700 font-bold text-sm border-b-2 border-brand-600 pb-1">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">Incoterms & Logistics</a>
+<a href="rfq.html" class="text-slate-600 font-medium text-sm hover:text-brand-600 transition">RFQ & Samples</a>
+
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20would%20like%20to%20inquire%20about%20agricultural%20commodity%20export." target="_blank" class="px-3.5 py-2 rounded-lg border border-emerald-600 text-emerald-700 hover:bg-emerald-50 text-xs font-semibold flex items-center gap-1.5 transition">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                        <span>WhatsApp Desk</span>
+                    </a>
+                    <a href="rfq.html" class="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition flex items-center gap-2">
+                        <span>Request B2B Quote</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+            <a href="index.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Home</a>
+<a href="products.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Commodities & Specs</a>
+<a href="compliance.html" class="block font-bold text-brand-700 py-1.5">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">Incoterms & Logistics</a>
+<a href="rfq.html" class="block font-medium text-slate-700 py-1.5 hover:text-brand-600">RFQ & Samples</a>
+
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <a href="rfq.html" class="w-full py-2.5 text-center bg-brand-600 text-white font-bold text-xs uppercase tracking-wider rounded-lg">Request B2B Quote</a>
+                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-2.5 text-center border border-emerald-600 text-emerald-700 font-bold text-xs rounded-lg">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Header Hero -->
+    <div class="bg-brand-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <span class="px-3 py-1 rounded-full bg-brand-800 text-brand-gold text-xs font-bold uppercase tracking-widest border border-brand-gold/30">
+                Quality Assurance & Testing
+            </span>
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold">Lab Standards & Regulatory Compliance</h1>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+                Comprehensive testing protocols ensuring zero pesticide residues, zero C4 sugar adulteration, mycotoxin control, and flawless pre-shipment inspection.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+
+        <!-- 4 Step QA Protocol -->
+        <div class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">The 4-Stage Agrovia Quality Gate</h2>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2">Every kilogram of commodity passes through four strict verification barriers prior to port release.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 relative">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold text-sm flex items-center justify-center">1</span>
+                    <h3 class="font-bold text-sm text-slate-900">Farm-Gate Intake Audit</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Direct harvest verification, raw moisture measurement, and preliminary organoleptic batch screening.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 relative">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold text-sm flex items-center justify-center">2</span>
+                    <h3 class="font-bold text-sm text-slate-900">Lab Chemical Analysis</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">IRMS isotope analysis for C4 sugars, HPLC for aflatoxins, and GC-MS for pesticide residues.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 relative">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold text-sm flex items-center justify-center">3</span>
+                    <h3 class="font-bold text-sm text-slate-900">Controlled Packaging & Fumigation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Sortex optical sorting, vacuum nitrogen-flush packing, and Phostoxin gas quarantine treatment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 relative">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold text-sm flex items-center justify-center">4</span>
+                    <h3 class="font-bold text-sm text-slate-900">PSI & Authority Sign-Off</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Pre-shipment inspection (SGS/BV) alongside Department of Agricultural Extension Phytosanitary clearance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testing Matrix Table -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="p-6 sm:p-8 bg-slate-900 text-white flex justify-between items-center">
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-brand-gold">Export Quality Testing Matrix</h3>
+                    <p class="text-xs text-slate-400">Standard laboratory verification parameters per export commodity</p>
+                </div>
+                <span class="hidden sm:inline px-3 py-1 rounded bg-brand-800 text-emerald-300 text-xs font-mono">ISO 17025 ACCREDITED LABS</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs">
+                    <thead class="bg-slate-100 text-slate-700 uppercase tracking-wider font-bold border-b border-slate-200">
+                        <tr>
+                            <th class="p-4">Commodity</th>
+                            <th class="p-4">Core Test Parameter</th>
+                            <th class="p-4">Testing Methodology</th>
+                            <th class="p-4">Agrovia Export Threshold</th>
+                            <th class="p-4">International Benchmark</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr>
+                            <td class="p-4 font-bold text-slate-900">Sundarbans Honey</td>
+                            <td class="p-4">C4 Sugar Adulteration</td>
+                            <td class="p-4">IRMS (Stable Isotope Mass Spec)</td>
+                            <td class="p-4 font-bold text-emerald-600">0.000% (Zero Added Sugar)</td>
+                            <td class="p-4">AOAC 998.12 / Codex Stan 12-1981</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-slate-900">Sundarbans Honey</td>
+                            <td class="p-4">HMF & Moisture</td>
+                            <td class="p-4">Spectrophotometric / Refractometry</td>
+                            <td class="p-4 font-bold text-brand-700">&lt; 15 mg/kg | &le; 18.5%</td>
+                            <td class="p-4">EU Council Directive 2001/110/EC</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-slate-900">Aromatic Rice (GI)</td>
+                            <td class="p-4">Broken Grains & Moisture</td>
+                            <td class="p-4">Sortex Optical & Electronic Moisture</td>
+                            <td class="p-4 font-bold text-brand-700">&lt; 3.0% Broken | &lt; 12.5% Moist</td>
+                            <td class="p-4">Codex Stan 198-1995</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-slate-900">Dried Fish (Shukti)</td>
+                            <td class="p-4">Pesticides & Histamine</td>
+                            <td class="p-4">GC-MS / HPLC Analysis</td>
+                            <td class="p-4 font-bold text-emerald-600">0% DDT | &lt; 200 ppm Histamine</td>
+                            <td class="p-4">Codex Stan 167-1989 / US FDA</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-slate-900">Char Peanuts</td>
+                            <td class="p-4">Total Aflatoxin (B1+B2+G1+G2)</td>
+                            <td class="p-4">HPLC with Fluorescence Detector</td>
+                            <td class="p-4 font-bold text-emerald-600">&lt; 4.0 ppb (B1 &lt; 2.0 ppb)</td>
+                            <td class="p-4">EU Regulation (EC) 1881/2006</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-slate-900">Himsagar Mango</td>
+                            <td class="p-4">Fruit Fly & Post-Harvest</td>
+                            <td class="p-4">Hot Water Treatment (HWT 47&deg;C)</td>
+                            <td class="p-4 font-bold text-brand-700">100% Free of Eggs / Larvae</td>
+                            <td class="p-4">EU Phytosanitary Directive 2019/2072</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pre-Shipment Inspection Readiness -->
+        <div class="bg-brand-50 rounded-3xl border border-brand-200 p-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div class="md:col-span-2 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-brand-200 text-brand-900 text-xs font-bold uppercase tracking-wider">Independent Verification</span>
+                <h3 class="font-serif text-2xl font-bold text-brand-950">SGS & Bureau Veritas Pre-Shipment Inspection</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    We welcome buyer-nominated third-party inspection agencies (SGS, Bureau Veritas, Intertek, Cotecna) at our packing facilities and warehouse hubs in Dhaka and Chattogram prior to container stuffing.
+                </p>
+            </div>
+            <div class="text-right">
+                <a href="rfq.html" class="inline-block px-6 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs uppercase tracking-wider transition">
+                    Request QA Spec Pack
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="bg-brand-950 text-slate-400 border-t border-brand-900 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-brand-900">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-brand-800 flex items-center justify-center text-brand-gold font-bold">
+                            <i data-lucide="sprout" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif font-extrabold text-xl tracking-tight text-white block leading-tight">AGROVIA</span>
+                            <span class="text-[9px] tracking-[0.25em] font-bold text-brand-gold uppercase block">ORGANIC &bull; EXPORT AGENCY</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
+                        Agrovia Organic is Bangladesh’s dedicated agricultural commodity and specialty food export agency, bridging local agro-heritage with international lab standards and trade banking compliance.
+                    </p>
+                    <div class="pt-2 space-y-1 text-xs text-slate-400">
+                        <div><strong>Founder:</strong> Pranto Sarker</div>
+                        <div><strong>Origin & Sourcing:</strong> Bangladesh 🇧🇩</div>
+                        <div><strong>Export Legal Status:</strong> EPB / ERC / Trade License Registered</div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200">Export Commodities</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="products.html#honey" class="hover:text-brand-gold transition">Sundarbans Mangrove Honey</a></li>
+                        <li><a href="products.html#rice" class="hover:text-brand-gold transition">Chinigura & GI Tulshimala Rice</a></li>
+                        <li><a href="products.html#fish" class="hover:text-brand-gold transition">Pesticide-Free Dried Fish (Shukti)</a></li>
+                        <li><a href="products.html#peanuts" class="hover:text-brand-gold transition">Northern Char Peanuts & Butter</a></li>
+                        <li><a href="products.html#fruits" class="hover:text-brand-gold transition">Himsagar Mango (GI) & Jackfruit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Trade & Banking -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200">Trade & Compliance</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="compliance.html" class="hover:text-brand-gold transition">Lab COA & Quality Testing</a></li>
+                        <li><a href="trade-logistics.html" class="hover:text-brand-gold transition">Incoterms (FOB, CFR, CIF)</a></li>
+                        <li><a href="trade-logistics.html#banking" class="hover:text-brand-gold transition">Sight LC (UCP 600) & CAD</a></li>
+                        <li><a href="trade-logistics.html#ports" class="hover:text-brand-gold transition">Chattogram & DAC Air Gateways</a></li>
+                        <li><a href="rfq.html" class="hover:text-brand-gold transition">B2B Sample Order Protocol</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Target Markets & Desk -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200">Export Desk</h4>
+                    <div class="text-xs space-y-2">
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-gold"></i>
+                            <span>Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-gold"></i>
+                            <span>export@agroviaorganic.com</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+                            <span>Trade Desk WhatsApp: +880 1700-000000</span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <span class="inline-block px-2.5 py-1 rounded bg-brand-900 border border-brand-800 text-[10px] text-brand-200 font-mono">
+                            TIMEZONE: GMT+6 (BST)
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <div>
+                    &copy; 2026 AGROVIA ORGANIC. All Rights Reserved. Founded by Pranto Sarker.
+                </div>
+                <div class="flex items-center gap-6">
+                    <span class="hover:text-slate-300">ISO 22000 & HACCP Framework</span>
+                    <span>&bull;</span>
+                    <span class="hover:text-slate-300">Bangladesh Bank EXP Compliance</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Common Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body></html>
