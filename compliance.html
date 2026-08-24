@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Food Safety & Regulatory Compliance Framework | AGROVIA ORGANIC</title>
-    <meta name="description" content="Strict zero-adulteration, chemical pesticide-free, and aflatoxin-controlled quality assurance protocols verified by ISO 17025 accredited laboratories.">
+    <title>Scientific Lab Compliance & Food Safety Assurance | AGROVIA ORGANIC</title>
+    <meta name="description" content="Explore Agrovia Organic's 4-stage quality gate, ISO 17025 accredited laboratory testing (IRMS, HPLC, GC-MS), and SGS pre-shipment inspection workflows.">
+    <meta name="keywords" content="Bangladesh agro export, Sundarbans honey, Chinigura rice, GI Tulshimala, dried fish shukti, char peanuts, Himsagar mango, organic agro exporter, ISO 22000, HACCP, Halal export">
+    <meta name="author" content="Pranto Sarker, AGROVIA ORGANIC">
     
-    <!-- Premium Google Fonts: Outfit (Modern Luxury UI) + Cormorant Garamond & Playfair Display (Heritage Serif) -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agrovia-organic.vercel.app/">
+    <meta property="og:title" content="Scientific Lab Compliance & Food Safety Assurance | AGROVIA ORGANIC">
+    <meta property="og:description" content="Explore Agrovia Organic's 4-stage quality gate, ISO 17025 accredited laboratory testing (IRMS, HPLC, GC-MS), and SGS pre-shipment inspection workflows.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1200&auto=format&fit=crop">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <!-- Favicon (SVG Organic Emblem) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314532d'/%3E%3Cpath d='M16 6c0 0-8 5-8 12a8 8 0 0 0 16 0C24 11 16 6 16 6z' fill='%23e6a838' opacity='0.9'/%3E%3Cpath d='M16 10c0 0-5 3.5-5 8a5 5 0 0 0 10 0C21 13.5 16 10 16 10z' fill='%23166534'/%3E%3C/svg%3E">
+    
+    <!-- Premium Google Fonts: Cormorant Garamond (Heritage Editorial Luxury Serif) + Outfit & Plus Jakarta Sans (Modern Export UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,18 +32,20 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            200: '#bbf7d0',
-                            500: '#15803d',
-                            600: '#166534',
-                            700: '#14532d',
-                            800: '#0f3d21',
-                            900: '#072413',
+                            50: '#f2f9f3',
+                            100: '#e3f3e6',
+                            200: '#c5e6cb',
+                            300: '#97d2a3',
+                            400: '#62b775',
+                            500: '#3c9b52',
+                            600: '#2c7d3f',
+                            700: '#14532d',  /* Deep Botanical Emerald */
+                            800: '#0f3d21',  /* Forest Green */
+                            900: '#072413',  /* Deep Onyx Emerald */
                             950: '#03140a',
-                            gold: '#e6a838',
+                            gold: '#d49a26', /* Radiant Royal Gold */
                             'gold-light': '#fdf8ec',
-                            'gold-glow': '#f59e0b',
+                            'gold-dark': '#b47b18',
                             amber: '#c07d17',
                         }
                     },
@@ -40,22 +55,27 @@
                         display: ['"Cormorant Garamond"', 'serif'],
                     },
                     animation: {
-                        'float-slow': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
-                        'shimmer': 'shimmer 2.5s infinite linear',
+                        'float-gentle': 'floatGentle 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                        'shimmer-gold': 'shimmerGold 3s infinite linear',
+                        'breeze': 'breeze 8s ease-in-out infinite',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                        floatGentle: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-10px) rotate(1.5deg)' },
                         },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
-                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+                        pulseSlow: {
+                            '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.03)' },
                         },
-                        shimmer: {
+                        shimmerGold: {
                             '0%': { backgroundPosition: '-200% 0' },
                             '100%': { backgroundPosition: '200% 0' },
+                        },
+                        breeze: {
+                            '0%, 100%': { transform: 'translateX(0px)' },
+                            '50%': { transform: 'translateX(15px)' },
                         }
                     }
                 }
@@ -67,73 +87,105 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
+        /* Luxury Gold & Emerald Gradients */
         .gold-gradient-text {
-            background: linear-gradient(135deg, #ffd778 0%, #e6a838 50%, #f59e0b 100%);
+            background: linear-gradient(135deg, #b47b18 0%, #d49a26 40%, #e6a838 70%, #9a6510 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero-mesh {
-            background-color: #03140a;
+        .emerald-gradient-text {
+            background: linear-gradient(135deg, #0f3d21 0%, #15803d 50%, #14532d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Clean Light Botanical Mesh Background */
+        .botanical-mesh {
+            background-color: #ffffff;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(22, 101, 52, 0.45) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(230, 168, 56, 0.25) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(7, 36, 19, 0.8) 0px, transparent 60%);
+                radial-gradient(at 0% 0%, rgba(20, 83, 45, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(212, 154, 38, 0.06) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(22, 101, 52, 0.04) 0px, transparent 60%);
         }
-        .glass-panel {
-            background: rgba(7, 36, 19, 0.7);
+        .botanical-mesh-ivory {
+            background-color: #fbfdfa;
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(20, 83, 45, 0.04) 0px, transparent 40%),
+                radial-gradient(at 90% 80%, rgba(212, 154, 38, 0.05) 0px, transparent 50%);
+        }
+
+        /* Luxury Glassmorphism for Light Canvas */
+        .glass-card-luxury {
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(230, 168, 56, 0.25);
+            border: 1px solid rgba(20, 83, 45, 0.12);
+            box-shadow: 0 20px 40px -15px rgba(20, 83, 45, 0.07), 0 0 1px 1px rgba(212, 154, 38, 0.15);
         }
-        .glass-panel-light {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-        .card-hover-fx {
+        
+        .card-hover-organic {
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .card-hover-fx:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15), 0 0 20px 2px rgba(230, 168, 56, 0.2);
+        .card-hover-organic:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 154, 38, 0.45);
+            box-shadow: 0 25px 50px -12px rgba(20, 83, 45, 0.14), 0 0 25px 2px rgba(212, 154, 38, 0.2);
         }
-        .image-zoom {
-            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        
+        .image-zoom-subtle {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .group:hover .image-zoom {
-            transform: scale(1.08);
+        .group:hover .image-zoom-subtle {
+            transform: scale(1.07);
+        }
+
+        /* Organic Seal Stamp Effect */
+        .organic-seal {
+            border: 2px dashed #d49a26;
+            border-radius: 9999px;
+            box-shadow: inset 0 0 12px rgba(212, 154, 38, 0.15);
+        }
+
+        /* Shimmering Button */
+        .btn-gold-shimmer {
+            background: linear-gradient(90deg, #d49a26 0%, #f59e0b 50%, #d49a26 100%);
+            background-size: 200% auto;
+            animation: shimmerGold 4s infinite linear;
+        }
+        .btn-gold-shimmer:hover {
+            background-position: right center;
         }
     </style>
 </head>
-<body class="font-sans text-slate-800 bg-[#fbfdfa] antialiased selection:bg-brand-gold selection:text-brand-950">
+<body class="font-sans text-slate-800 bg-[#ffffff] antialiased selection:bg-brand-100 selection:text-brand-800 relative">
 
-    <!-- Top Global Banner -->
-    <div class="bg-brand-950 text-slate-300 text-[11px] py-2 px-4 border-b border-brand-900/80">
+
+    <!-- Top Global Notification Ribbon (Light Organic Luxury) -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-[11px] py-2 px-4 border-b border-brand-700/50 shadow-sm">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-4 flex-wrap justify-center font-light tracking-wide">
-                <span class="flex items-center gap-1.5 text-brand-gold">
+                <span class="flex items-center gap-1.5 text-brand-gold font-medium">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                    <span class="font-medium">Govt. Certified Exporter &bull; ERC / EPB Registered</span>
+                    <span>Govt. Certified Exporter &bull; EPB / ERC Registered Bangladesh</span>
                 </span>
-                <span class="hidden md:inline text-brand-800">|</span>
-                <span class="flex items-center gap-1.5 text-slate-300">
-                    <i data-lucide="anchor" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>Gateways: Chattogram Sea Port (BDCGP) &bull; Dhaka Air (DAC)</span>
+                <span class="hidden md:inline text-brand-600">|</span>
+                <span class="flex items-center gap-1.5 text-emerald-200">
+                    <i data-lucide="sprout" class="w-3.5 h-3.5 text-brand-gold"></i>
+                    <span>100% Traceable Direct Farmer Sourcing</span>
                 </span>
-                <span class="hidden md:inline text-brand-800">|</span>
-                <span class="flex items-center gap-1.5 text-emerald-400">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                <span class="hidden md:inline text-brand-600">|</span>
+                <span class="flex items-center gap-1.5 text-slate-200">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
                     <span>ISO 22000 &bull; HACCP &bull; SGS Pre-Shipment Ready</span>
                 </span>
             </div>
             <div class="flex items-center gap-4 text-[11px]">
                 <a href="rfq.html" class="text-brand-gold hover:text-white transition font-semibold flex items-center gap-1">
                     <i data-lucide="send" class="w-3 h-3"></i>
-                    <span>Fast-Track RFQ Portal</span>
+                    <span>Fast-Track RFQ Desk</span>
                 </a>
-                <span class="text-brand-800">|</span>
-                <span class="text-slate-400 flex items-center gap-1">
+                <span class="text-brand-700">|</span>
+                <span class="text-slate-300 flex items-center gap-1">
                     <i data-lucide="globe-2" class="w-3 h-3 text-brand-gold"></i>
                     <span>UK &bull; USA &bull; UAE &bull; KSA &bull; EU &bull; SG</span>
                 </span>
@@ -141,44 +193,45 @@
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-brand-950/90 backdrop-blur-xl border-b border-brand-900/60 shadow-2xl transition-all">
+    <!-- Main Navigation Bar (Pristine White Glass with Emerald Branding) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-emerald-100 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand Logo -->
                 <a href="index.html" class="flex items-center gap-3.5 group">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-700 to-brand-900 border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-lg shadow-brand-950 group-hover:scale-105 group-hover:border-brand-gold transition duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-700 to-brand-900 border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-md shadow-brand-900/10 group-hover:scale-105 group-hover:border-brand-gold transition duration-300">
                         <i data-lucide="sprout" class="w-7 h-7"></i>
                     </div>
                     <div>
-                        <span class="font-serif text-2xl font-bold tracking-tight text-white block leading-none">AGROVIA</span>
-                        <span class="text-[9px] tracking-[0.3em] font-extrabold gold-gradient-text uppercase block mt-1">ORGANIC &bull; EXPORT AGENCY</span>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-brand-900 block leading-none">AGROVIA</span>
+                        <span class="text-[9px] tracking-[0.28em] font-extrabold gold-gradient-text uppercase block mt-1">ORGANIC &bull; EXPORT AGENCY</span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Home</a>\n<a href="products.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Commodities & Specs</a>\n<a href="compliance.html" class="text-brand-gold font-bold text-sm tracking-wide border-b-2 border-brand-gold pb-1">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Incoterms & Logistics</a>\n<a href="rfq.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">RFQ & Samples</a>\n
+                    <a href="index.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Home</a>\n<a href="products.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Commodities & Specs</a>\n<a href="compliance.html" class="text-brand-700 font-bold text-sm tracking-wide border-b-2 border-brand-700 pb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>Lab Standards & QA</a>\n<a href="trade-logistics.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Incoterms & Logistics</a>\n<a href="rfq.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">RFQ & Samples</a>\n
                 </nav>
 
                 <!-- Action CTA -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20am%20interested%20in%20agricultural%20commodity%20export." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-500/40 text-emerald-400 hover:bg-emerald-950/60 text-xs font-semibold flex items-center gap-2 transition duration-200">
+                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20am%20interested%20in%20agricultural%20commodity%20export." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-600/30 text-emerald-800 bg-emerald-50 hover:bg-emerald-100/80 text-xs font-semibold flex items-center gap-2 transition duration-200">
                         <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
                         </span>
                         <span>Trade Concierge</span>
                     </a>
-                    <a href="rfq.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-brand-gold text-brand-950 text-xs font-bold uppercase tracking-wider shadow-lg shadow-brand-gold/20 hover:shadow-brand-gold/40 transition duration-300 flex items-center gap-2 transform hover:-translate-y-0.5">
+                    <a href="rfq.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-800 hover:to-brand-900 text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-brand-900/15 hover:shadow-lg transition duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 border border-brand-gold/40">
+                        <span class="text-brand-gold">✦</span>
                         <span>Request B2B Quote</span>
-                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-gold"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-slate-300 hover:bg-brand-900 border border-brand-800 focus:outline-none">
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 focus:outline-none">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -186,177 +239,144 @@
         </div>
 
         <!-- Mobile Menu Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-900 bg-brand-950 px-6 pt-4 pb-8 space-y-3">
-            <a href="index.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Home</a>\n<a href="products.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Commodities & Specs</a>\n<a href="compliance.html" class="block font-bold text-brand-gold py-2">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Incoterms & Logistics</a>\n<a href="rfq.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">RFQ & Samples</a>\n
-            <div class="pt-4 border-t border-brand-900 flex flex-col gap-3">
-                <a href="rfq.html" class="w-full py-3 text-center bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-950 font-bold text-xs uppercase tracking-wider rounded-xl">Request B2B Quote</a>
-                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 text-center border border-emerald-500 text-emerald-400 font-bold text-xs rounded-xl">WhatsApp Trade Concierge</a>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 pt-4 pb-8 space-y-2 shadow-xl">
+            <a href="index.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Home</a>\n<a href="products.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Commodities & Specs</a>\n<a href="compliance.html" class="block font-bold text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Incoterms & Logistics</a>\n<a href="rfq.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">RFQ & Samples</a>\n
+            <div class="pt-4 border-t border-slate-200 flex flex-col gap-3">
+                <a href="rfq.html" class="w-full py-3 text-center bg-brand-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow">Request B2B Quote</a>
+                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 text-center border border-emerald-600 text-emerald-800 bg-emerald-50 font-bold text-xs rounded-xl">WhatsApp Trade Concierge</a>
             </div>
         </div>
     </header>
     
-<section class="hero-mesh text-white py-20 border-b border-brand-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <span class="px-4 py-1.5 rounded-full bg-brand-900 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest">
-            International Standards
+
+<!-- Hero Section -->
+<section class="py-16 lg:py-24 botanical-mesh border-b border-emerald-100 text-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <span class="px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-extrabold uppercase tracking-widest">
+            Institutional Quality Assurance &bull; ISO 22000 &bull; HACCP &bull; SGS
         </span>
-        <h1 class="font-serif text-4xl sm:text-5xl font-bold">Food Safety & Compliance Matrix</h1>
-        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto font-light">
-            Engineered to eliminate import border detention risk across the UK, USA, European Union, and Gulf Cooperation Council (GCC) markets.
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-900 leading-tight">
+            Scientific Purity, <br>
+            <span class="gold-gradient-text italic font-normal">Zero Compromise</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            Every export shipment is subject to independent ISO 17025 accredited laboratory analysis before customs clearance and vessel gate-in.
         </p>
     </div>
 </section>
 
 <!-- 4-Stage Quality Gate -->
-<section class="py-24 bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        <div class="text-center max-w-3xl mx-auto space-y-3">
-            <span class="px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
-                End-to-End Quality Gates
-            </span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Our 4-Stage Quality Gate Process</h2>
-            <p class="text-xs sm:text-sm text-slate-600 font-light">
-                Every shipment undergoes systematic checkpoints from farm gate to port loading.
-            </p>
+<section class="py-20 bg-white border-b border-emerald-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-emerald-800">Systematic Defense Protocol</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">4-Stage Export Quality Gate</h2>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 card-hover-fx">
-                <div class="w-12 h-12 rounded-2xl bg-brand-700 text-white font-serif font-bold text-xl flex items-center justify-center shadow-md">
-                    01
-                </div>
-                <h3 class="font-bold text-slate-900 text-base">Farm-Gate Intake</h3>
-                <p class="text-xs text-slate-600 leading-relaxed font-light">
-                    On-site physical inspection, moisture screening, initial refractometer / sorting tests, and digital lot batch logging.
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Stage 1 -->
+            <div class="p-6 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-700 text-white font-bold flex items-center justify-center text-sm shadow">01</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">Origin Traceability</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Direct harvesting oversight with GPS registered farmer clusters, preventing intermediate open-market broker adulteration.
                 </p>
-                <div class="text-[11px] font-mono text-brand-700 font-semibold">&check; Origin Sourcing Check</div>
             </div>
-
-            <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 card-hover-fx">
-                <div class="w-12 h-12 rounded-2xl bg-brand-700 text-white font-serif font-bold text-xl flex items-center justify-center shadow-md">
-                    02
-                </div>
-                <h3 class="font-bold text-slate-900 text-base">Lab Analytical Assay</h3>
-                <p class="text-xs text-slate-600 leading-relaxed font-light">
-                    ISO 17025 accredited laboratory testing (IRMS C4 isotope, GC-MS pesticide screen, HPLC aflatoxin, microbiology).
+            <!-- Stage 2 -->
+            <div class="p-6 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-700 text-white font-bold flex items-center justify-center text-sm shadow">02</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">Batch Lab Testing</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Pre-processing analysis for C4 sugars (IRMS), Aflatoxins (HPLC), and pesticide residues (GC-MS) at certified facilities.
                 </p>
-                <div class="text-[11px] font-mono text-brand-700 font-semibold">&check; Certified COA Issuance</div>
             </div>
-
-            <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 card-hover-fx">
-                <div class="w-12 h-12 rounded-2xl bg-brand-700 text-white font-serif font-bold text-xl flex items-center justify-center shadow-md">
-                    03
-                </div>
-                <h3 class="font-bold text-slate-900 text-base">Clean Room Packaging</h3>
-                <p class="text-xs text-slate-600 leading-relaxed font-light">
-                    Vacuum sealing, nitrogen flushing, metal detection, food-grade drum stuffing, and secondary tamper-evident seals.
+            <!-- Stage 3 -->
+            <div class="p-6 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-700 text-white font-bold flex items-center justify-center text-sm shadow">03</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">SGS Pre-Shipment</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Independent sampling and container sealing by SGS or Bureau Veritas at Chattogram port prior to shipping.
                 </p>
-                <div class="text-[11px] font-mono text-brand-700 font-semibold">&check; Zero Foreign Contamination</div>
             </div>
-
-            <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 card-hover-fx">
-                <div class="w-12 h-12 rounded-2xl bg-brand-700 text-white font-serif font-bold text-xl flex items-center justify-center shadow-md">
-                    04
-                </div>
-                <h3 class="font-bold text-slate-900 text-base">Port Pre-Shipment PSI</h3>
-                <p class="text-xs text-slate-600 leading-relaxed font-light">
-                    Pre-Shipment Inspection by SGS / Bureau Veritas / Intertek at Chattogram Port container stuffing yard before customs sealing.
+            <!-- Stage 4 -->
+            <div class="p-6 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-700 text-white font-bold flex items-center justify-center text-sm shadow">04</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">Active Cold Chain</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Reefer container and temperature-logged air cargo dispatch ensuring zero thermal degradation during ocean/air transit.
                 </p>
-                <div class="text-[11px] font-mono text-brand-700 font-semibold">&check; PSI Inspection Report</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Lab Matrix Table -->
-<section class="py-24 bg-[#f4f7f4] border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-3">
-            <span class="px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
-                Analytical Verification Matrix
-            </span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Laboratory Assay Methodology</h2>
+<!-- Testing Matrix Table -->
+<section class="py-20 bg-[#f8faf6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-emerald-800">Analytical Chemistry</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Laboratory Testing Matrix</h2>
         </div>
-
-        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left text-xs border-collapse">
-                    <thead>
-                        <tr class="bg-brand-950 text-white font-semibold">
-                            <th class="py-4 px-6 uppercase tracking-wider text-[11px]">Commodity</th>
-                            <th class="py-4 px-6 uppercase tracking-wider text-[11px]">Target Contaminant / Quality Parameter</th>
-                            <th class="py-4 px-6 uppercase tracking-wider text-[11px]">Assay Technology</th>
-                            <th class="py-4 px-6 uppercase tracking-wider text-[11px]">Acceptance Standard</th>
-                            <th class="py-4 px-6 uppercase tracking-wider text-[11px]">Regulatory Benchmark</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100 text-slate-700">
-                        <tr class="hover:bg-brand-50/50 transition">
-                            <td class="py-4 px-6 font-bold text-slate-900">Sundarbans Raw Honey</td>
-                            <td class="py-4 px-6">C4 Cane & Corn Sugar Adulteration</td>
-                            <td class="py-4 px-6 font-mono text-brand-700">EA-IRMS Stable Carbon Isotope</td>
-                            <td class="py-4 px-6 font-bold text-emerald-600">0.000% Added Sugars</td>
-                            <td class="py-4 px-6">Codex Stan 12-1981 / US FDA</td>
-                        </tr>
-                        <tr class="hover:bg-brand-50/50 transition">
-                            <td class="py-4 px-6 font-bold text-slate-900">Northern Char Peanuts</td>
-                            <td class="py-4 px-6">Total Aflatoxin (B1, B2, G1, G2)</td>
-                            <td class="py-4 px-6 font-mono text-brand-700">HPLC with Fluorescence Detector</td>
-                            <td class="py-4 px-6 font-bold text-emerald-600">&lt; 4.0 ppb (B1 &lt; 2.0 ppb)</td>
-                            <td class="py-4 px-6">EU Reg. (EC) 1881/2006</td>
-                        </tr>
-                        <tr class="hover:bg-brand-50/50 transition">
-                            <td class="py-4 px-6 font-bold text-slate-900">Pesticide-Free Dried Fish</td>
-                            <td class="py-4 px-6">Organochlorine / Organophosphate Residues</td>
-                            <td class="py-4 px-6 font-mono text-brand-700">GC-MS/MS Multi-Residue Screen</td>
-                            <td class="py-4 px-6 font-bold text-emerald-600">0% (Below Limit of Detection)</td>
-                            <td class="py-4 px-6">EU MRL / US FDA Fish & Fishery Guide</td>
-                        </tr>
-                        <tr class="hover:bg-brand-50/50 transition">
-                            <td class="py-4 px-6 font-bold text-slate-900">Aromatic Chinigura Rice</td>
-                            <td class="py-4 px-6">Live Insects, Larvae & Heavy Metals (As, Cd, Pb)</td>
-                            <td class="py-4 px-6 font-mono text-brand-700">ICP-MS & Phosphine Gas Residue Test</td>
-                            <td class="py-4 px-6 font-bold text-emerald-600">0 Live Insects / Heavy Metal &lt; MRL</td>
-                            <td class="py-4 px-6">ISO 7301 / Codex CXS 193-1995</td>
-                        </tr>
-                        <tr class="hover:bg-brand-50/50 transition">
-                            <td class="py-4 px-6 font-bold text-slate-900">Himsagar Mango (GI)</td>
-                            <td class="py-4 px-6">Fruit Fly Larvae (*Bactrocera dorsalis*)</td>
-                            <td class="py-4 px-6 font-mono text-brand-700">Automated Hot Water Treatment (HWT)</td>
-                            <td class="py-4 px-6 font-bold text-emerald-600">47&deg;C Core Temp for 75 Min</td>
-                            <td class="py-4 px-6">NPPO Bangladesh / UK DEFRA Quarantine</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="overflow-x-auto rounded-3xl border border-emerald-200 shadow-xl bg-white">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="bg-brand-900 text-white">
+                        <th class="text-left px-6 py-4 font-bold text-xs uppercase tracking-wider text-emerald-200">Commodity</th>
+                        <th class="text-left px-6 py-4 font-bold text-xs uppercase tracking-wider text-emerald-200">Analytical Test</th>
+                        <th class="text-left px-6 py-4 font-bold text-xs uppercase tracking-wider text-emerald-200">Instrument Protocol</th>
+                        <th class="text-left px-6 py-4 font-bold text-xs uppercase tracking-wider text-emerald-200">Export Standard</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-emerald-100 text-xs">
+                    <tr class="hover:bg-emerald-50/50 transition">
+                        <td class="px-6 py-4 font-bold text-brand-900">Sundarbans Raw Honey</td>
+                        <td class="px-6 py-4 text-slate-700">C4 Sugar Adulteration &amp; Botanical Origin</td>
+                        <td class="px-6 py-4 text-slate-500 font-mono">EA-IRMS (Stable Carbon Isotope)</td>
+                        <td class="px-6 py-4 font-bold text-emerald-800">0.000% C4 Sugar (Zero Adulteration)</td>
+                    </tr>
+                    <tr class="hover:bg-emerald-50/50 transition">
+                        <td class="px-6 py-4 font-bold text-brand-900">Northern Char Peanuts</td>
+                        <td class="px-6 py-4 text-slate-700">Total Aflatoxin (B1, B2, G1, G2)</td>
+                        <td class="px-6 py-4 text-slate-500 font-mono">HPLC-FLD (Fluorescence Detection)</td>
+                        <td class="px-6 py-4 font-bold text-emerald-800">&lt; 4.0 ppb (EU 1881/2006 Compliant)</td>
+                    </tr>
+                    <tr class="hover:bg-emerald-50/50 transition">
+                        <td class="px-6 py-4 font-bold text-brand-900">Solar Dried Fish (Shukti)</td>
+                        <td class="px-6 py-4 text-slate-700">Organochlorine &amp; Pyrethroid Pesticides</td>
+                        <td class="px-6 py-4 text-slate-500 font-mono">GC-MS/MS (Mass Spectrometry)</td>
+                        <td class="px-6 py-4 font-bold text-emerald-800">0.0% Chemical Residues Detected</td>
+                    </tr>
+                    <tr class="hover:bg-emerald-50/50 transition">
+                        <td class="px-6 py-4 font-bold text-brand-900">Himsagar Mango (GI)</td>
+                        <td class="px-6 py-4 text-slate-700">Phytosanitary Fruit Fly &amp; Anthracnose</td>
+                        <td class="px-6 py-4 text-slate-500 font-mono">Automated Hot Water Treatment (HWT)</td>
+                        <td class="px-6 py-4 font-bold text-emerald-800">47&deg;C Core Immersion for 75 min</td>
+                    </tr>
+                    <tr class="hover:bg-emerald-50/50 transition">
+                        <td class="px-6 py-4 font-bold text-brand-900">Chinigura &amp; Tulshimala Rice</td>
+                        <td class="px-6 py-4 text-slate-700">Physical Broken Grain &amp; Live Infestation</td>
+                        <td class="px-6 py-4 text-slate-500 font-mono">Sortex Optical Sorter + Phostoxin</td>
+                        <td class="px-6 py-4 font-bold text-emerald-800">&lt; 3.0% Broken &bull; 100% Weevil-Free</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
 
-<!-- RFQ Callout -->
-<section class="py-16 bg-slate-900 text-white text-center">
-    <div class="max-w-4xl mx-auto px-4 space-y-6">
-        <h2 class="font-serif text-3xl font-bold">Require a Specific Lab Protocol or PSI Agency?</h2>
-        <p class="text-xs sm:text-sm text-slate-300">We accommodate customized pre-shipment inspection mandates by SGS, Intertek, or Bureau Veritas upon buyer request.</p>
-        <a href="rfq.html" class="inline-block px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-950 font-bold text-xs uppercase tracking-wider shadow-lg">
-            Submit Compliance Specifications &rarr;
-        </a>
-    </div>
-</section>
 
-    <!-- Global Footer -->
-    <footer class="bg-brand-950 text-slate-400 border-t border-brand-900/80 pt-20 pb-12 relative overflow-hidden">
+    <!-- Global Footer (Rich Deep Emerald Base for Majestic Grounding) -->
+    <footer class="bg-gradient-to-b from-brand-950 to-[#020d06] text-slate-300 border-t border-brand-800/60 pt-20 pb-12 relative overflow-hidden">
         <!-- Ambient decorative background glow -->
         <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -top-20 -right-20 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-brand-900/80">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-brand-800/60">
                 
                 <!-- Brand Profile -->
                 <div class="lg:col-span-2 space-y-5">
                     <div class="flex items-center gap-3.5">
-                        <div class="w-11 h-11 rounded-2xl bg-brand-800 border border-brand-gold/30 flex items-center justify-center text-brand-gold shadow-md">
+                        <div class="w-11 h-11 rounded-2xl bg-brand-800 border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-md">
                             <i data-lucide="sprout" class="w-6 h-6"></i>
                         </div>
                         <div>
@@ -370,13 +390,13 @@
                     <div class="pt-2 space-y-1.5 text-xs text-slate-400 font-light">
                         <div><strong class="text-slate-200 font-medium">Founder & MD:</strong> Pranto Sarker</div>
                         <div><strong class="text-slate-200 font-medium">Origin:</strong> Dhaka, Bangladesh 🇧🇩</div>
-                        <div><strong class="text-slate-200 font-medium">Regulatory Status:</strong> EPB / ERC / Trade License Registered</div>
+                        <div><strong class="text-slate-200 font-medium">Regulatory Status:</strong> EPB / ERC / Trade License Registered Exporter</div>
                     </div>
                 </div>
 
                 <!-- Commodities -->
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-200 gold-gradient-text">Export Portfolio</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-brand-gold">Export Portfolio</h4>
                     <ul class="space-y-2.5 text-xs">
                         <li><a href="products.html#honey" class="hover:text-brand-gold transition duration-200">Sundarbans Raw Honey</a></li>
                         <li><a href="products.html#rice" class="hover:text-brand-gold transition duration-200">Chinigura & GI Tulshimala Rice</a></li>
@@ -388,7 +408,7 @@
 
                 <!-- Compliance & Trade -->
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-200 gold-gradient-text">Trade & Quality</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-brand-gold">Trade & Quality</h4>
                     <ul class="space-y-2.5 text-xs">
                         <li><a href="compliance.html" class="hover:text-brand-gold transition duration-200">Lab Standards (IRMS / HPLC)</a></li>
                         <li><a href="compliance.html" class="hover:text-brand-gold transition duration-200">Pre-Shipment Inspection (SGS/BV)</a></li>
@@ -400,11 +420,11 @@
 
                 <!-- Export Desk -->
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-200 gold-gradient-text">International Desk</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-brand-gold">International Desk</h4>
                     <div class="text-xs space-y-2.5">
                         <div class="flex items-center gap-2 text-slate-300">
                             <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0"></i>
-                            <span>Dhaka, Bangladesh</span>
+                            <span>Gulshan Commercial Area, Dhaka</span>
                         </div>
                         <div class="flex items-center gap-2 text-slate-300">
                             <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0"></i>
@@ -428,19 +448,19 @@
             <!-- Bottom Credits -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                 <div>
-                    &copy; 2026 <strong class="text-slate-300">AGROVIA ORGANIC</strong>. All Rights Reserved. Founded by Pranto Sarker.
+                    &copy; 2026 <strong class="text-slate-200">AGROVIA ORGANIC</strong>. All Rights Reserved. Founded by Pranto Sarker.
                 </div>
                 <div class="flex items-center gap-6">
-                    <span class="hover:text-slate-300">ISO 22000 & HACCP Framework</span>
+                    <span class="hover:text-slate-200">ISO 22000 & HACCP Framework</span>
                     <span>&bull;</span>
-                    <span class="hover:text-slate-300">Bangladesh Bank EXP Compliance</span>
+                    <span class="hover:text-slate-200">Bangladesh Bank EXP Compliance</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Floating Concierge WhatsApp Widget -->
-    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20am%20interested%20in%20sourcing%20agricultural%20commodities." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-500 text-white shadow-2xl shadow-emerald-950/80 hover:scale-110 transition duration-300 flex items-center gap-2.5 group border border-emerald-400/40">
+    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20am%20interested%20in%20sourcing%20agricultural%20commodities." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-2xl bg-gradient-to-tr from-emerald-700 to-emerald-600 text-white shadow-2xl shadow-emerald-950/40 hover:scale-110 transition duration-300 flex items-center gap-2.5 group border border-emerald-400/40">
         <i data-lucide="message-circle" class="w-6 h-6"></i>
         <span class="text-xs font-bold tracking-wide hidden group-hover:inline-block pr-1 transition-all duration-300">WhatsApp Trade Desk</span>
     </a>
@@ -456,4 +476,6 @@
             });
         }
     </script>
-</body></html>
+</body>
+</html>
+
