@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Trade Logistics, Incoterms 2020 & Trade Finance | AGROVIA ORGANIC</title>
-    <meta name="description" content="End-to-end export shipping operations from Chattogram Sea Port (BDCGP) and Dhaka Air Cargo (DAC). Confirmed Sight LC and CAD payment structures.">
+    <title>International Trade Finance, Logistics & Incoterms 2020 | AGROVIA ORGANIC</title>
+    <meta name="description" content="Export gateways, ocean and air freight schedules, payment terms (Confirmed Sight LC, CAD), and regulatory trade documentation from Dhaka and Chattogram.">
+    <meta name="keywords" content="Bangladesh agro export, Sundarbans honey, Chinigura rice, GI Tulshimala, dried fish shukti, char peanuts, Himsagar mango, organic agro exporter, ISO 22000, HACCP, Halal export">
+    <meta name="author" content="Pranto Sarker, AGROVIA ORGANIC">
     
-    <!-- Premium Google Fonts: Outfit (Modern Luxury UI) + Cormorant Garamond & Playfair Display (Heritage Serif) -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agrovia-organic.vercel.app/">
+    <meta property="og:title" content="International Trade Finance, Logistics & Incoterms 2020 | AGROVIA ORGANIC">
+    <meta property="og:description" content="Export gateways, ocean and air freight schedules, payment terms (Confirmed Sight LC, CAD), and regulatory trade documentation from Dhaka and Chattogram.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1200&auto=format&fit=crop">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <!-- Favicon (SVG Organic Emblem) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314532d'/%3E%3Cpath d='M16 6c0 0-8 5-8 12a8 8 0 0 0 16 0C24 11 16 6 16 6z' fill='%23e6a838' opacity='0.9'/%3E%3Cpath d='M16 10c0 0-5 3.5-5 8a5 5 0 0 0 10 0C21 13.5 16 10 16 10z' fill='%23166534'/%3E%3C/svg%3E">
+    
+    <!-- Premium Google Fonts: Cormorant Garamond (Heritage Editorial Luxury Serif) + Outfit & Plus Jakarta Sans (Modern Export UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,18 +32,20 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            200: '#bbf7d0',
-                            500: '#15803d',
-                            600: '#166534',
-                            700: '#14532d',
-                            800: '#0f3d21',
-                            900: '#072413',
+                            50: '#f2f9f3',
+                            100: '#e3f3e6',
+                            200: '#c5e6cb',
+                            300: '#97d2a3',
+                            400: '#62b775',
+                            500: '#3c9b52',
+                            600: '#2c7d3f',
+                            700: '#14532d',  /* Deep Botanical Emerald */
+                            800: '#0f3d21',  /* Forest Green */
+                            900: '#072413',  /* Deep Onyx Emerald */
                             950: '#03140a',
-                            gold: '#e6a838',
+                            gold: '#d49a26', /* Radiant Royal Gold */
                             'gold-light': '#fdf8ec',
-                            'gold-glow': '#f59e0b',
+                            'gold-dark': '#b47b18',
                             amber: '#c07d17',
                         }
                     },
@@ -40,22 +55,27 @@
                         display: ['"Cormorant Garamond"', 'serif'],
                     },
                     animation: {
-                        'float-slow': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
-                        'shimmer': 'shimmer 2.5s infinite linear',
+                        'float-gentle': 'floatGentle 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                        'shimmer-gold': 'shimmerGold 3s infinite linear',
+                        'breeze': 'breeze 8s ease-in-out infinite',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                        floatGentle: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-10px) rotate(1.5deg)' },
                         },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
-                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+                        pulseSlow: {
+                            '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.03)' },
                         },
-                        shimmer: {
+                        shimmerGold: {
                             '0%': { backgroundPosition: '-200% 0' },
                             '100%': { backgroundPosition: '200% 0' },
+                        },
+                        breeze: {
+                            '0%, 100%': { transform: 'translateX(0px)' },
+                            '50%': { transform: 'translateX(15px)' },
                         }
                     }
                 }
@@ -67,73 +87,105 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
+        /* Luxury Gold & Emerald Gradients */
         .gold-gradient-text {
-            background: linear-gradient(135deg, #ffd778 0%, #e6a838 50%, #f59e0b 100%);
+            background: linear-gradient(135deg, #b47b18 0%, #d49a26 40%, #e6a838 70%, #9a6510 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero-mesh {
-            background-color: #03140a;
+        .emerald-gradient-text {
+            background: linear-gradient(135deg, #0f3d21 0%, #15803d 50%, #14532d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Clean Light Botanical Mesh Background */
+        .botanical-mesh {
+            background-color: #ffffff;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(22, 101, 52, 0.45) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(230, 168, 56, 0.25) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(7, 36, 19, 0.8) 0px, transparent 60%);
+                radial-gradient(at 0% 0%, rgba(20, 83, 45, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(212, 154, 38, 0.06) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(22, 101, 52, 0.04) 0px, transparent 60%);
         }
-        .glass-panel {
-            background: rgba(7, 36, 19, 0.7);
+        .botanical-mesh-ivory {
+            background-color: #fbfdfa;
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(20, 83, 45, 0.04) 0px, transparent 40%),
+                radial-gradient(at 90% 80%, rgba(212, 154, 38, 0.05) 0px, transparent 50%);
+        }
+
+        /* Luxury Glassmorphism for Light Canvas */
+        .glass-card-luxury {
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(230, 168, 56, 0.25);
+            border: 1px solid rgba(20, 83, 45, 0.12);
+            box-shadow: 0 20px 40px -15px rgba(20, 83, 45, 0.07), 0 0 1px 1px rgba(212, 154, 38, 0.15);
         }
-        .glass-panel-light {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-        .card-hover-fx {
+        
+        .card-hover-organic {
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .card-hover-fx:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15), 0 0 20px 2px rgba(230, 168, 56, 0.2);
+        .card-hover-organic:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 154, 38, 0.45);
+            box-shadow: 0 25px 50px -12px rgba(20, 83, 45, 0.14), 0 0 25px 2px rgba(212, 154, 38, 0.2);
         }
-        .image-zoom {
-            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        
+        .image-zoom-subtle {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .group:hover .image-zoom {
-            transform: scale(1.08);
+        .group:hover .image-zoom-subtle {
+            transform: scale(1.07);
+        }
+
+        /* Organic Seal Stamp Effect */
+        .organic-seal {
+            border: 2px dashed #d49a26;
+            border-radius: 9999px;
+            box-shadow: inset 0 0 12px rgba(212, 154, 38, 0.15);
+        }
+
+        /* Shimmering Button */
+        .btn-gold-shimmer {
+            background: linear-gradient(90deg, #d49a26 0%, #f59e0b 50%, #d49a26 100%);
+            background-size: 200% auto;
+            animation: shimmerGold 4s infinite linear;
+        }
+        .btn-gold-shimmer:hover {
+            background-position: right center;
         }
     </style>
 </head>
-<body class="font-sans text-slate-800 bg-[#fbfdfa] antialiased selection:bg-brand-gold selection:text-brand-950">
+<body class="font-sans text-slate-800 bg-[#ffffff] antialiased selection:bg-brand-100 selection:text-brand-800 relative">
 
-    <!-- Top Global Banner -->
-    <div class="bg-brand-950 text-slate-300 text-[11px] py-2 px-4 border-b border-brand-900/80">
+
+    <!-- Top Global Notification Ribbon (Light Organic Luxury) -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-[11px] py-2 px-4 border-b border-brand-700/50 shadow-sm">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-4 flex-wrap justify-center font-light tracking-wide">
-                <span class="flex items-center gap-1.5 text-brand-gold">
+                <span class="flex items-center gap-1.5 text-brand-gold font-medium">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                    <span class="font-medium">Govt. Certified Exporter &bull; ERC / EPB Registered</span>
+                    <span>Govt. Certified Exporter &bull; EPB / ERC Registered Bangladesh</span>
                 </span>
-                <span class="hidden md:inline text-brand-800">|</span>
-                <span class="flex items-center gap-1.5 text-slate-300">
-                    <i data-lucide="anchor" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>Gateways: Chattogram Sea Port (BDCGP) &bull; Dhaka Air (DAC)</span>
+                <span class="hidden md:inline text-brand-600">|</span>
+                <span class="flex items-center gap-1.5 text-emerald-200">
+                    <i data-lucide="sprout" class="w-3.5 h-3.5 text-brand-gold"></i>
+                    <span>100% Traceable Direct Farmer Sourcing</span>
                 </span>
-                <span class="hidden md:inline text-brand-800">|</span>
-                <span class="flex items-center gap-1.5 text-emerald-400">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                <span class="hidden md:inline text-brand-600">|</span>
+                <span class="flex items-center gap-1.5 text-slate-200">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
                     <span>ISO 22000 &bull; HACCP &bull; SGS Pre-Shipment Ready</span>
                 </span>
             </div>
             <div class="flex items-center gap-4 text-[11px]">
                 <a href="rfq.html" class="text-brand-gold hover:text-white transition font-semibold flex items-center gap-1">
                     <i data-lucide="send" class="w-3 h-3"></i>
-                    <span>Fast-Track RFQ Portal</span>
+                    <span>Fast-Track RFQ Desk</span>
                 </a>
-                <span class="text-brand-800">|</span>
-                <span class="text-slate-400 flex items-center gap-1">
+                <span class="text-brand-700">|</span>
+                <span class="text-slate-300 flex items-center gap-1">
                     <i data-lucide="globe-2" class="w-3 h-3 text-brand-gold"></i>
                     <span>UK &bull; USA &bull; UAE &bull; KSA &bull; EU &bull; SG</span>
                 </span>
@@ -141,44 +193,45 @@
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-brand-950/90 backdrop-blur-xl border-b border-brand-900/60 shadow-2xl transition-all">
+    <!-- Main Navigation Bar (Pristine White Glass with Emerald Branding) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-emerald-100 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand Logo -->
                 <a href="index.html" class="flex items-center gap-3.5 group">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-700 to-brand-900 border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-lg shadow-brand-950 group-hover:scale-105 group-hover:border-brand-gold transition duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-700 to-brand-900 border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-md shadow-brand-900/10 group-hover:scale-105 group-hover:border-brand-gold transition duration-300">
                         <i data-lucide="sprout" class="w-7 h-7"></i>
                     </div>
                     <div>
-                        <span class="font-serif text-2xl font-bold tracking-tight text-white block leading-none">AGROVIA</span>
-                        <span class="text-[9px] tracking-[0.3em] font-extrabold gold-gradient-text uppercase block mt-1">ORGANIC &bull; EXPORT AGENCY</span>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-brand-900 block leading-none">AGROVIA</span>
+                        <span class="text-[9px] tracking-[0.28em] font-extrabold gold-gradient-text uppercase block mt-1">ORGANIC &bull; EXPORT AGENCY</span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Home</a>\n<a href="products.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Commodities & Specs</a>\n<a href="compliance.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">Incoterms & Logistics</a>\n<a href="rfq.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-gold transition duration-200">RFQ & Samples</a>\n
+                    <a href="index.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Home</a>\n<a href="products.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Commodities & Specs</a>\n<a href="compliance.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="text-brand-700 font-bold text-sm tracking-wide border-b-2 border-brand-700 pb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>Incoterms & Logistics</a>\n<a href="rfq.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">RFQ & Samples</a>\n
                 </nav>
 
                 <!-- Action CTA -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20am%20interested%20in%20agricultural%20commodity%20export." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-500/40 text-emerald-400 hover:bg-emerald-950/60 text-xs font-semibold flex items-center gap-2 transition duration-200">
+                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20am%20interested%20in%20agricultural%20commodity%20export." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-600/30 text-emerald-800 bg-emerald-50 hover:bg-emerald-100/80 text-xs font-semibold flex items-center gap-2 transition duration-200">
                         <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
                         </span>
                         <span>Trade Concierge</span>
                     </a>
-                    <a href="rfq.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-brand-gold text-brand-950 text-xs font-bold uppercase tracking-wider shadow-lg shadow-brand-gold/20 hover:shadow-brand-gold/40 transition duration-300 flex items-center gap-2 transform hover:-translate-y-0.5">
+                    <a href="rfq.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-800 hover:to-brand-900 text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-brand-900/15 hover:shadow-lg transition duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 border border-brand-gold/40">
+                        <span class="text-brand-gold">✦</span>
                         <span>Request B2B Quote</span>
-                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-gold"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-slate-300 hover:bg-brand-900 border border-brand-800 focus:outline-none">
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 focus:outline-none">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -186,183 +239,126 @@
         </div>
 
         <!-- Mobile Menu Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-900 bg-brand-950 px-6 pt-4 pb-8 space-y-3">
-            <a href="index.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Home</a>\n<a href="products.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Commodities & Specs</a>\n<a href="compliance.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">Incoterms & Logistics</a>\n<a href="rfq.html" class="block font-medium text-slate-300 py-2 hover:text-brand-gold">RFQ & Samples</a>\n
-            <div class="pt-4 border-t border-brand-900 flex flex-col gap-3">
-                <a href="rfq.html" class="w-full py-3 text-center bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-950 font-bold text-xs uppercase tracking-wider rounded-xl">Request B2B Quote</a>
-                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 text-center border border-emerald-500 text-emerald-400 font-bold text-xs rounded-xl">WhatsApp Trade Concierge</a>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 pt-4 pb-8 space-y-2 shadow-xl">
+            <a href="index.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Home</a>\n<a href="products.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Commodities & Specs</a>\n<a href="compliance.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="block font-bold text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">Incoterms & Logistics</a>\n<a href="rfq.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">RFQ & Samples</a>\n
+            <div class="pt-4 border-t border-slate-200 flex flex-col gap-3">
+                <a href="rfq.html" class="w-full py-3 text-center bg-brand-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow">Request B2B Quote</a>
+                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 text-center border border-emerald-600 text-emerald-800 bg-emerald-50 font-bold text-xs rounded-xl">WhatsApp Trade Concierge</a>
             </div>
         </div>
     </header>
     
-<section class="hero-mesh text-white py-20 border-b border-brand-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <span class="px-4 py-1.5 rounded-full bg-brand-900 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest">
-            International Freight & Trade Finance
+
+<!-- Hero Section -->
+<section class="py-16 lg:py-24 botanical-mesh border-b border-emerald-100 text-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <span class="px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-extrabold uppercase tracking-widest">
+            Incoterms 2020 &bull; Sight LC UCP 600 &bull; Chattogram Port (BDCGP)
         </span>
-        <h1 class="font-serif text-4xl sm:text-5xl font-bold">Trade Logistics & Banking Framework</h1>
-        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto font-light">
-            Seamless maritime and air-cargo export operations under Incoterms 2020 and ICC UCP 600 banking standards.
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-900 leading-tight">
+            Seamless Global <br>
+            <span class="gold-gradient-text italic font-normal">Export Logistics</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            Institutional trade finance structures, swift customs clearance, and cold chain shipping from Bangladesh’s premier maritime and aviation hubs.
         </p>
     </div>
 </section>
 
-<!-- Incoterms & Ports -->
-<section class="py-24 bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
-                    Export Gateways
-                </span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-                    Multi-Modal Export Gateways from Bangladesh
-                </h2>
-                <p class="text-slate-600 text-sm leading-relaxed font-light">
-                    We maintain dedicated freight-forwarding arrangements across sea and air terminals, ensuring unbroken cold-chain for perishables and optimized container stuffing for dry bulk commodities.
-                </p>
-
-                <div class="space-y-4 text-xs">
-                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
-                        <div class="font-bold text-slate-900 text-sm flex items-center justify-between">
-                            <span>Chattogram Sea Port (BDCGP)</span>
-                            <span class="text-brand-700 font-mono">Ocean Freight FCL/LCL</span>
-                        </div>
-                        <p class="text-slate-600">Handles 92% of national maritime export container traffic. Direct feeder lines to Singapore, Port Klang, and Colombo hubs.</p>
+<!-- Port Gateways & Shipping Durations -->
+<section class="py-20 bg-white border-b border-emerald-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Sea Freight -->
+            <div class="p-8 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-6">
+                <div class="flex items-center gap-3 border-b border-emerald-100 pb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-700 text-brand-gold flex items-center justify-center shadow">
+                        <i data-lucide="anchor" class="w-6 h-6"></i>
                     </div>
-
-                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
-                        <div class="font-bold text-slate-900 text-sm flex items-center justify-between">
-                            <span>Hazrat Shahjalal Int'l Airport (DAC)</span>
-                            <span class="text-emerald-700 font-mono">Cold-Chain Air Cargo</span>
-                        </div>
-                        <p class="text-slate-600">Dedicated perishables cargo terminal equipped with refrigerated storage for fresh GI mangoes and emergency air shipments.</p>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-900">Chattogram Sea Port (BDCGP)</h3>
+                        <span class="text-xs text-slate-500">Ocean Freight Gate-In &bull; FCL / LCL Container Fleet</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="h-96 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 relative group">
-                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1000&auto=format&fit=crop" alt="Cargo Port Logistics" class="w-full h-full object-cover image-zoom">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-brand-gold">Global Supply Chain</span>
-                    <h4 class="font-serif text-xl font-bold">Incoterms 2020: FOB, CFR, CIF</h4>
-                    <p class="text-xs text-slate-300 font-light">Custom cleared with complete international shipping documentation.</p>
+                <div class="space-y-3 text-xs">
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Port of Singapore / Port Klang:</span><span class="font-bold text-brand-900 font-mono">~5 - 7 Days</span></div>
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Jebel Ali (Dubai), UAE:</span><span class="font-bold text-brand-900 font-mono">~14 - 16 Days</span></div>
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Jeddah Islamic Port, Saudi Arabia:</span><span class="font-bold text-brand-900 font-mono">~16 - 19 Days</span></div>
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">London Gateway / Southampton, UK:</span><span class="font-bold text-brand-900 font-mono">~24 - 28 Days</span></div>
+                    <div class="flex justify-between py-2"><span class="text-slate-600">New York / New Jersey, USA:</span><span class="font-bold text-brand-900 font-mono">~30 - 35 Days</span></div>
                 </div>
             </div>
-        </div>
 
-        <!-- Documentation Suite -->
-        <div class="space-y-6 pt-8 border-t border-slate-200">
-            <div class="text-center max-w-2xl mx-auto space-y-2">
-                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">Standard Export Document Package</h3>
-                <p class="text-xs text-slate-600">Dispatched via DHL/FedEx courier and bank-to-bank SWIFT dispatch upon vessel departure.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-xs">
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">1. Bill of Lading / AWB</div>
-                    <p class="text-slate-500 font-light">Clean on Board Ocean B/L or Air Waybill.</p>
+            <!-- Air Freight -->
+            <div class="p-8 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-6">
+                <div class="flex items-center gap-3 border-b border-emerald-100 pb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-700 text-brand-gold flex items-center justify-center shadow">
+                        <i data-lucide="plane" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-900">Hazrat Shahjalal Int'l Airport (DAC)</h3>
+                        <span class="text-xs text-slate-500">Dedicated Cold-Chain Air Cargo Pallets</span>
+                    </div>
                 </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">2. Commercial Invoice</div>
-                    <p class="text-slate-500 font-light">Signed original with HS Code classification.</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">3. Detailed Packing List</div>
-                    <p class="text-slate-500 font-light">Itemized gross/net weights and container stuffing.</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">4. Certificate of Origin</div>
-                    <p class="text-slate-500 font-light">Issued by Export Promotion Bureau (EPB) / DCCI.</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">5. Phytosanitary Certificate</div>
-                    <p class="text-slate-500 font-light">Issued by Plant Quarantine Wing (DAE).</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">6. ISO 17025 COA</div>
-                    <p class="text-slate-500 font-light">Complete physical, chemical, and residue assay.</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">7. Fumigation Certificate</div>
-                    <p class="text-slate-500 font-light">Phostoxin gas treatment verification certificate.</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
-                    <div class="font-bold text-brand-700">8. SGS / BV PSI Report</div>
-                    <p class="text-slate-500 font-light">Pre-shipment inspection verification (upon request).</p>
+                <div class="space-y-3 text-xs">
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Dubai / Abu Dhabi (DXB / AUH):</span><span class="font-bold text-emerald-800 font-mono">~5 - 6 Hours</span></div>
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Riyadh / Jeddah (RUH / JED):</span><span class="font-bold text-emerald-800 font-mono">~7 - 8 Hours</span></div>
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">London Heathrow (LHR):</span><span class="font-bold text-emerald-800 font-mono">~12 - 14 Hours</span></div>
+                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Frankfurt / Amsterdam (FRA / AMS):</span><span class="font-bold text-emerald-800 font-mono">~13 - 15 Hours</span></div>
+                    <div class="flex justify-between py-2"><span class="text-slate-600">Toronto Pearson (YYZ):</span><span class="font-bold text-emerald-800 font-mono">~20 - 24 Hours</span></div>
                 </div>
             </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- Payment Terms -->
-<section class="py-20 bg-[#0a1e12] text-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
-        <div class="space-y-3">
-            <span class="px-4 py-1.5 rounded-full bg-brand-900 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest">
-                Trade Finance
-            </span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold">Standard Payment Terms & Banking</h2>
-            <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto font-light">
-                Structured in compliance with Bangladesh Bank Foreign Exchange Guidelines and International Chamber of Commerce (ICC) UCP 600 standards.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            <div class="glass-panel rounded-3xl p-8 border border-brand-gold/30 space-y-4">
-                <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/30 text-emerald-300 text-xs font-bold font-mono">
-                    PREFERRED FOR FCL CONTRACTS
-                </div>
-                <h3 class="font-serif text-2xl font-bold text-white">Irrevocable Confirmed Sight LC</h3>
-                <p class="text-xs text-slate-300 leading-relaxed font-light">
-                    100% Letter of Credit payable at sight against presentation of clean compliant shipping documents, issued by a prime international bank and confirmed through our Dhaka bank.
-                </p>
-                <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-brand-800">
-                    <li class="flex items-center gap-2">&check; Governed by ICC UCP 600 rules</li>
-                    <li class="flex items-center gap-2">&check; Maximum security for large volume contracts</li>
-                </ul>
-            </div>
-
-            <div class="glass-panel rounded-3xl p-8 border border-brand-gold/30 space-y-4">
-                <div class="inline-block px-3 py-1 rounded-full bg-amber-500/30 text-amber-300 text-xs font-bold font-mono">
-                    SAMPLE & REPEAT BUYERS
-                </div>
-                <h3 class="font-serif text-2xl font-bold text-white">Advance T/T & CAD (Cash Against Docs)</h3>
-                <p class="text-xs text-slate-300 leading-relaxed font-light">
-                    30% Advance telegraphic transfer (T/T) deposit upon contract signing to initiate lot procurement and packing, with the 70% balance payable against scanned original shipping documents (B/L / COA).
-                </p>
-                <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-brand-800">
-                    <li class="flex items-center gap-2">&check; Faster clearance for air cargo perishables</li>
-                    <li class="flex items-center gap-2">&check; Flexible for ongoing multi-container monthly programs</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="pt-4">
-            <a href="rfq.html" class="inline-block px-9 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-950 font-bold text-xs uppercase tracking-wider shadow-2xl transition">
-                Request Trade Proforma & Banking Instructions &rarr;
-            </a>
         </div>
     </div>
 </section>
 
-    <!-- Global Footer -->
-    <footer class="bg-brand-950 text-slate-400 border-t border-brand-900/80 pt-20 pb-12 relative overflow-hidden">
+<!-- Banking & Trade Finance Terms -->
+<section id="banking" class="py-20 bg-[#f8faf6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-emerald-800">Trade Finance Security</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Accepted Payment Terms &amp; Banking Framework</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm space-y-3">
+                <div class="text-brand-gold font-bold text-xs uppercase tracking-wider">Primary Instrument</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">Confirmed Sight LC</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Irrevocable, Confirmed Letter of Credit at Sight issued under ICC Uniform Customs and Practice (UCP 600) rules.
+                </p>
+            </div>
+            <div class="p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm space-y-3">
+                <div class="text-brand-gold font-bold text-xs uppercase tracking-wider">Fast Settlement</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">CAD (Cash Against Documents)</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Documents routed through premier commercial banks (Standard Chartered, HSBC, or Eastern Bank PLC).
+                </p>
+            </div>
+            <div class="p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm space-y-3">
+                <div class="text-brand-gold font-bold text-xs uppercase tracking-wider">Air Shipments</div>
+                <h3 class="font-serif text-xl font-bold text-brand-900">Advance Wire Transfer (TT)</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Standard 50% advance upon Proforma Invoice (PI) confirmation and 50% upon Airway Bill (AWB) issuance for fresh fruits.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Global Footer (Rich Deep Emerald Base for Majestic Grounding) -->
+    <footer class="bg-gradient-to-b from-brand-950 to-[#020d06] text-slate-300 border-t border-brand-800/60 pt-20 pb-12 relative overflow-hidden">
         <!-- Ambient decorative background glow -->
         <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -top-20 -right-20 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-brand-900/80">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-brand-800/60">
                 
                 <!-- Brand Profile -->
                 <div class="lg:col-span-2 space-y-5">
                     <div class="flex items-center gap-3.5">
-                        <div class="w-11 h-11 rounded-2xl bg-brand-800 border border-brand-gold/30 flex items-center justify-center text-brand-gold shadow-md">
+                        <div class="w-11 h-11 rounded-2xl bg-brand-800 border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-md">
                             <i data-lucide="sprout" class="w-6 h-6"></i>
                         </div>
                         <div>
@@ -376,13 +372,13 @@
                     <div class="pt-2 space-y-1.5 text-xs text-slate-400 font-light">
                         <div><strong class="text-slate-200 font-medium">Founder & MD:</strong> Pranto Sarker</div>
                         <div><strong class="text-slate-200 font-medium">Origin:</strong> Dhaka, Bangladesh 🇧🇩</div>
-                        <div><strong class="text-slate-200 font-medium">Regulatory Status:</strong> EPB / ERC / Trade License Registered</div>
+                        <div><strong class="text-slate-200 font-medium">Regulatory Status:</strong> EPB / ERC / Trade License Registered Exporter</div>
                     </div>
                 </div>
 
                 <!-- Commodities -->
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-200 gold-gradient-text">Export Portfolio</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-brand-gold">Export Portfolio</h4>
                     <ul class="space-y-2.5 text-xs">
                         <li><a href="products.html#honey" class="hover:text-brand-gold transition duration-200">Sundarbans Raw Honey</a></li>
                         <li><a href="products.html#rice" class="hover:text-brand-gold transition duration-200">Chinigura & GI Tulshimala Rice</a></li>
@@ -394,7 +390,7 @@
 
                 <!-- Compliance & Trade -->
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-200 gold-gradient-text">Trade & Quality</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-brand-gold">Trade & Quality</h4>
                     <ul class="space-y-2.5 text-xs">
                         <li><a href="compliance.html" class="hover:text-brand-gold transition duration-200">Lab Standards (IRMS / HPLC)</a></li>
                         <li><a href="compliance.html" class="hover:text-brand-gold transition duration-200">Pre-Shipment Inspection (SGS/BV)</a></li>
@@ -406,11 +402,11 @@
 
                 <!-- Export Desk -->
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-200 gold-gradient-text">International Desk</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-brand-gold">International Desk</h4>
                     <div class="text-xs space-y-2.5">
                         <div class="flex items-center gap-2 text-slate-300">
                             <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0"></i>
-                            <span>Dhaka, Bangladesh</span>
+                            <span>Gulshan Commercial Area, Dhaka</span>
                         </div>
                         <div class="flex items-center gap-2 text-slate-300">
                             <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0"></i>
@@ -434,19 +430,19 @@
             <!-- Bottom Credits -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                 <div>
-                    &copy; 2026 <strong class="text-slate-300">AGROVIA ORGANIC</strong>. All Rights Reserved. Founded by Pranto Sarker.
+                    &copy; 2026 <strong class="text-slate-200">AGROVIA ORGANIC</strong>. All Rights Reserved. Founded by Pranto Sarker.
                 </div>
                 <div class="flex items-center gap-6">
-                    <span class="hover:text-slate-300">ISO 22000 & HACCP Framework</span>
+                    <span class="hover:text-slate-200">ISO 22000 & HACCP Framework</span>
                     <span>&bull;</span>
-                    <span class="hover:text-slate-300">Bangladesh Bank EXP Compliance</span>
+                    <span class="hover:text-slate-200">Bangladesh Bank EXP Compliance</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Floating Concierge WhatsApp Widget -->
-    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20am%20interested%20in%20sourcing%20agricultural%20commodities." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-500 text-white shadow-2xl shadow-emerald-950/80 hover:scale-110 transition duration-300 flex items-center gap-2.5 group border border-emerald-400/40">
+    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20am%20interested%20in%20sourcing%20agricultural%20commodities." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-2xl bg-gradient-to-tr from-emerald-700 to-emerald-600 text-white shadow-2xl shadow-emerald-950/40 hover:scale-110 transition duration-300 flex items-center gap-2.5 group border border-emerald-400/40">
         <i data-lucide="message-circle" class="w-6 h-6"></i>
         <span class="text-xs font-bold tracking-wide hidden group-hover:inline-block pr-1 transition-all duration-300">WhatsApp Trade Desk</span>
     </a>
@@ -462,4 +458,6 @@
             });
         }
     </script>
-</body></html>
+</body>
+</html>
+
