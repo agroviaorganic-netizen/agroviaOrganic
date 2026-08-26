@@ -1,0 +1,134 @@
+{
+  "products": [
+    {
+      "id": "honey",
+      "name": "Sundarbans Wild Raw Mangrove Honey",
+      "tag": "UNESCO Biosphere Reserve",
+      "origin": "Khulna & Satkhira Mangrove Reserve",
+      "img": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=800&auto=format&fit=crop",
+      "desc": "Ethically harvested by certified traditional Mawalis from wild Apis dorsata mangrove hives. 100% natural, multi-floral nectar (Khalshi, Goran, Bain).",
+      "specs": [
+        [
+          "C4 Sugar (IRMS)",
+          "0.000% (Zero Adulteration)"
+        ],
+        [
+          "Moisture Content",
+          "<= 18.5% (Export Spec)"
+        ],
+        [
+          "HMF Level",
+          "< 15 mg/kg (Fresh Batch)"
+        ],
+        [
+          "Packaging",
+          "200L Steel Drums / 250g-1kg Amber Jars"
+        ]
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "Chinigura & GI Tulshimala Aromatic Rice",
+      "tag": "GI Registered Heritage",
+      "origin": "Dinajpur & Sherpur Districts",
+      "img": "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop",
+      "desc": "Authentic small-grain aromatic heritage rice. Sortex cleaned with broken grains under 3%, vacuum packed in metallic foil for maximum aroma retention.",
+      "specs": [
+        [
+          "Broken Grains",
+          "< 3.0% (Sortex Cleaned)"
+        ],
+        [
+          "Moisture Content",
+          "< 12.5% Max"
+        ],
+        [
+          "Fumigation",
+          "100% Phostoxin Gas Treated"
+        ],
+        [
+          "Packaging",
+          "1kg/5kg Vacuum Foil & 25kg PP Bags"
+        ]
+      ]
+    },
+    {
+      "id": "fish",
+      "name": "Pesticide-Free Dried Fish (Shukti)",
+      "tag": "Solar Dome Dehydrated",
+      "origin": "Bay of Bengal & Cox's Bazar Coast",
+      "img": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
+      "desc": "Artisanal Pomfret, Ribbonfish, Shrimp, and Loitta cured in enclosed hybrid solar poly-domes without synthetic chemical insecticides (zero DDT/Malathion).",
+      "specs": [
+        [
+          "Chemical Pesticides",
+          "0.0% Detected (GC-MS Verified)"
+        ],
+        [
+          "Histamine Level",
+          "< 200 ppm (Codex Spec)"
+        ],
+        [
+          "Moisture Range",
+          "<= 15.0%"
+        ],
+        [
+          "Packaging",
+          "Nitrogen-Flushed Vacuum Pouches"
+        ]
+      ]
+    },
+    {
+      "id": "peanuts",
+      "name": "Northern Char Peanuts & Pure Butter",
+      "tag": "EU Reg. 1881/2006 Compliant",
+      "origin": "Padma & Jamuna Char Alluvial Basins",
+      "img": "https://images.unsplash.com/photo-1567892328127-142dbd282245?q=80&w=800&auto=format&fit=crop",
+      "desc": "Cultivated in mineral-rich sandy loam river islands. Rapid mechanical drying guarantees strict compliance with EU aflatoxin thresholds.",
+      "specs": [
+        [
+          "Total Aflatoxin",
+          "< 4.0 ppb (B1 < 2.0 ppb)"
+        ],
+        [
+          "Kernel Moisture",
+          "7.0% - 8.0%"
+        ],
+        [
+          "Value-Add Line",
+          "100% Pure Peanut Butter (0% Palm Oil)"
+        ],
+        [
+          "Packaging",
+          "25kg Vacuum Bags / Food Glass Jars"
+        ]
+      ]
+    },
+    {
+      "id": "fruits",
+      "name": "Himsagar Mango (GI) & Fresh Jackfruit",
+      "tag": "Quarantine HWT 47C Protocol",
+      "origin": "Rajshahi & Chapainawabganj Orchards",
+      "img": "https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=800&auto=format&fit=crop",
+      "desc": "Tree-bagged premium mangoes undergoing mandatory automated Hot Water Treatment (HWT 47C for 75 min) in Dhaka prior to direct cold-chain air shipment.",
+      "specs": [
+        [
+          "Sugar / Brix Level",
+          "19 - 22 Brix (Peak Sweetness)"
+        ],
+        [
+          "Quarantine HWT",
+          "47C for 75 Minutes"
+        ],
+        [
+          "Transit Mode",
+          "Active Cold-Chain Air Cargo (DAC)"
+        ],
+        [
+          "Packaging",
+          "2kg/4kg Ventilated Export Cartons"
+        ]
+      ]
+    }
+  ]
+}
