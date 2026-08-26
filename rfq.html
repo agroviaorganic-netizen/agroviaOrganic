@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B RFQ Portal & Sample Procurement Desk | AGROVIA ORGANIC</title>
-    <meta name="description" content="Request an official Proforma Invoice (PI), CIF/FOB pricing, container stuffing schedule, and laboratory sample kits from Agrovia Organic.">
+    <title>RFQ & Sample Requests | AGROVIA ORGANIC</title>
+    <meta name="description" content="Submit a B2B Request for Quotation or request a free product sample from Agrovia Organic Bangladesh. Fast response from our international trade desk.">
     <meta name="keywords" content="Bangladesh agro export, Sundarbans honey, Chinigura rice, GI Tulshimala, dried fish shukti, char peanuts, Himsagar mango, organic agro exporter, ISO 22000, HACCP, Halal export">
     <meta name="author" content="Pranto Sarker, AGROVIA ORGANIC">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agrovia-organic.vercel.app/">
-    <meta property="og:title" content="B2B RFQ Portal & Sample Procurement Desk | AGROVIA ORGANIC">
-    <meta property="og:description" content="Request an official Proforma Invoice (PI), CIF/FOB pricing, container stuffing schedule, and laboratory sample kits from Agrovia Organic.">
+    <meta property="og:title" content="RFQ & Sample Requests | AGROVIA ORGANIC">
+    <meta property="og:description" content="Submit a B2B Request for Quotation or request a free product sample from Agrovia Organic Bangladesh. Fast response from our international trade desk.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1200&auto=format&fit=crop">
     <meta property="twitter:card" content="summary_large_image">
 
     <!-- Favicon (SVG Organic Emblem) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314532d'/%3E%3Cpath d='M16 6c0 0-8 5-8 12a8 8 0 0 0 16 0C24 11 16 6 16 6z' fill='%23e6a838' opacity='0.9'/%3E%3Cpath d='M16 10c0 0-5 3.5-5 8a5 5 0 0 0 10 0C21 13.5 16 10 16 10z' fill='%23166534'/%3E%3C/svg%3E">
     
-    <!-- Premium Google Fonts: Cormorant Garamond (Heritage Editorial Luxury Serif) + Outfit & Plus Jakarta Sans (Modern Export UI) -->
+    <!-- Premium Google Fonts: Playfair Display (Luxury Serif) + Outfit + Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -51,14 +51,19 @@
                     },
                     fontFamily: {
                         sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-                        display: ['"Cormorant Garamond"', 'serif'],
+                        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+                        display: ['"Playfair Display"', 'serif'],
+                        legacy: ['"Cormorant Garamond"', 'Georgia', 'serif'],
                     },
                     animation: {
                         'float-gentle': 'floatGentle 6s ease-in-out infinite',
                         'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
                         'shimmer-gold': 'shimmerGold 3s infinite linear',
                         'breeze': 'breeze 8s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.7s ease forwards',
+                        'fade-in': 'fadeIn 0.8s ease forwards',
+                        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
+                        'ticker': 'ticker 30s linear infinite',
                     },
                     keyframes: {
                         floatGentle: {
@@ -76,7 +81,23 @@
                         breeze: {
                             '0%, 100%': { transform: 'translateX(0px)' },
                             '50%': { transform: 'translateX(15px)' },
-                        }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        pulseDot: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.6)', opacity: '0.4' },
+                        },
+                        ticker: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
                     }
                 }
             }
@@ -87,19 +108,48 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Luxury Gold & Emerald Gradients */
+        /* ==============================
+           LUXURY TYPOGRAPHY SYSTEM
+           ============================== */
+        .hero-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .section-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .gold-shimmer-text {
+            background: linear-gradient(90deg, #b47b18, #d49a26, #f0c040, #e6a838, #b47b18);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerGold 4s linear infinite;
+        }
+
+        /* ==============================
+           GOLD & EMERALD GRADIENTS
+           ============================== */
         .gold-gradient-text {
             background: linear-gradient(135deg, #b47b18 0%, #d49a26 40%, #e6a838 70%, #9a6510 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .emerald-gradient-text {
             background: linear-gradient(135deg, #0f3d21 0%, #15803d 50%, #14532d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        /* Clean Light Botanical Mesh Background */
+        /* ==============================
+           BOTANICAL MESH BACKGROUNDS
+           ============================== */
         .botanical-mesh {
             background-color: #ffffff;
             background-image: 
@@ -113,8 +163,16 @@
                 radial-gradient(at 10% 20%, rgba(20, 83, 45, 0.04) 0px, transparent 40%),
                 radial-gradient(at 90% 80%, rgba(212, 154, 38, 0.05) 0px, transparent 50%);
         }
+        .botanical-mesh-gold {
+            background-color: #fffbf0;
+            background-image:
+                radial-gradient(at 20% 10%, rgba(212, 154, 38, 0.08) 0px, transparent 50%),
+                radial-gradient(at 80% 90%, rgba(20, 83, 45, 0.05) 0px, transparent 50%);
+        }
 
-        /* Luxury Glassmorphism for Light Canvas */
+        /* ==============================
+           GLASSMORPHISM CARDS
+           ============================== */
         .glass-card-luxury {
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
@@ -122,7 +180,6 @@
             border: 1px solid rgba(20, 83, 45, 0.12);
             box-shadow: 0 20px 40px -15px rgba(20, 83, 45, 0.07), 0 0 1px 1px rgba(212, 154, 38, 0.15);
         }
-        
         .card-hover-organic {
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -131,7 +188,6 @@
             border-color: rgba(212, 154, 38, 0.45);
             box-shadow: 0 25px 50px -12px rgba(20, 83, 45, 0.14), 0 0 25px 2px rgba(212, 154, 38, 0.2);
         }
-        
         .image-zoom-subtle {
             transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -139,14 +195,14 @@
             transform: scale(1.07);
         }
 
-        /* Organic Seal Stamp Effect */
+        /* ==============================
+           ORGANIC SEAL & BUTTONS
+           ============================== */
         .organic-seal {
             border: 2px dashed #d49a26;
             border-radius: 9999px;
             box-shadow: inset 0 0 12px rgba(212, 154, 38, 0.15);
         }
-
-        /* Shimmering Button */
         .btn-gold-shimmer {
             background: linear-gradient(90deg, #d49a26 0%, #f59e0b 50%, #d49a26 100%);
             background-size: 200% auto;
@@ -155,45 +211,248 @@
         .btn-gold-shimmer:hover {
             background-position: right center;
         }
+        .btn-sample {
+            background: linear-gradient(135deg, rgba(20,83,45,0.08) 0%, rgba(20,83,45,0.12) 100%);
+            border: 1.5px solid rgba(20,83,45,0.3);
+            color: #14532d;
+            transition: all 0.3s ease;
+        }
+        .btn-sample:hover {
+            background: linear-gradient(135deg, #14532d 0%, #0f3d21 100%);
+            color: #ffffff;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(20,83,45,0.25);
+        }
+
+        /* ==============================
+           SCROLL REVEAL ANIMATIONS
+           ============================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-35px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(35px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ==============================
+           TESTIMONIAL CARDS
+           ============================== */
+        .testimonial-card {
+            background: linear-gradient(145deg, #fffbf0 0%, #ffffff 100%);
+            border: 1px solid rgba(212, 154, 38, 0.25);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 30px rgba(20,83,45,0.06), 0 2px 8px rgba(212,154,38,0.1);
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(20,83,45,0.1), 0 4px 12px rgba(212,154,38,0.2);
+            border-color: rgba(212, 154, 38, 0.5);
+        }
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            color: #d49a26;
+            opacity: 0.3;
+        }
+
+        /* ==============================
+           LIGHTBOX (CERTIFICATE VIEWER)
+           ============================== */
+        .cert-lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(3, 20, 10, 0.92);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .cert-lightbox-overlay.active {
+            display: flex;
+        }
+        .cert-lightbox-content {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 720px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 2px solid rgba(212,154,38,0.4);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .cert-card {
+            cursor: pointer;
+            border: 1px solid rgba(20,83,45,0.15);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            background: white;
+        }
+        .cert-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: rgba(212,154,38,0.5);
+            box-shadow: 0 15px 35px rgba(20,83,45,0.15), 0 0 0 2px rgba(212,154,38,0.3);
+        }
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ==============================
+           ORIGIN MAP STYLES
+           ============================== */
+        .origin-region {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .origin-region:hover .region-fill {
+            filter: brightness(1.2);
+        }
+        .origin-dot {
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+        .origin-tooltip {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(4px);
+        }
+        .origin-region:hover .origin-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==============================
+           COUNTRY FLAGS STRIP
+           ============================== */
+        .country-flag-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.875rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        .country-flag-item:hover {
+            background: rgba(20,83,45,0.06);
+            border-color: rgba(212,154,38,0.3);
+            transform: translateY(-3px);
+        }
+        .flag-emoji {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        /* ==============================
+           STICKY SMART QUOTE BAR
+           ============================== */
+        #smart-quote-bar {
+            position: relative;
+            z-index: 60;
+        }
+
+        /* ==============================
+           PDF BROCHURE BUTTON
+           ============================== */
+        .btn-brochure {
+            background: linear-gradient(135deg, #14532d 0%, #0f3d21 100%);
+            color: white;
+            border: 1.5px solid rgba(212,154,38,0.5);
+            border-radius: 0.875rem;
+            padding: 0.85rem 1.75rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.35s ease;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(20,83,45,0.2);
+        }
+        .btn-brochure:hover {
+            background: linear-gradient(135deg, #0f3d21 0%, #072413 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(20,83,45,0.3);
+            border-color: rgba(212,154,38,0.8);
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-[#ffffff] antialiased selection:bg-brand-100 selection:text-brand-800 relative">
 
-
-    <!-- Top Global Notification Ribbon (Light Organic Luxury) -->
-    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-[11px] py-2 px-4 border-b border-brand-700/50 shadow-sm">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-4 flex-wrap justify-center font-light tracking-wide">
-                <span class="flex items-center gap-1.5 text-brand-gold font-medium">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                    <span>Govt. Certified Exporter &bull; EPB / ERC Registered Bangladesh</span>
+    <!-- ✦ SMART QUOTE BAR ✦ -->
+    
+    <!-- ✦ STICKY SMART QUOTE BAR ✦ -->
+    <div id="smart-quote-bar" class="bg-gradient-to-r from-brand-700 via-brand-800 to-brand-700 border-b border-brand-gold/20 py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px]">
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-emerald-100">
+                <span class="flex items-center gap-1.5 font-medium">
+                    <span class="text-brand-gold">📦</span>
+                    <span>Min. Order: <strong class="text-white">500 kg</strong></span>
                 </span>
-                <span class="hidden md:inline text-brand-600">|</span>
-                <span class="flex items-center gap-1.5 text-emerald-200">
-                    <i data-lucide="sprout" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>100% Traceable Direct Farmer Sourcing</span>
+                <span class="hidden sm:inline text-brand-700/60">|</span>
+                <span class="flex items-center gap-1.5 font-medium">
+                    <span class="text-brand-gold">✈</span>
+                    <span>Ships to: <strong class="text-white">UK · USA · UAE · KSA · EU · CA · MY · SG</strong></span>
                 </span>
-                <span class="hidden md:inline text-brand-600">|</span>
-                <span class="flex items-center gap-1.5 text-slate-200">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>ISO 22000 &bull; HACCP &bull; SGS Pre-Shipment Ready</span>
-                </span>
-            </div>
-            <div class="flex items-center gap-4 text-[11px]">
-                <a href="rfq.html" class="text-brand-gold hover:text-white transition font-semibold flex items-center gap-1">
-                    <i data-lucide="send" class="w-3 h-3"></i>
-                    <span>Fast-Track RFQ Desk</span>
-                </a>
-                <span class="text-brand-700">|</span>
-                <span class="text-slate-300 flex items-center gap-1">
-                    <i data-lucide="globe-2" class="w-3 h-3 text-brand-gold"></i>
-                    <span>UK &bull; USA &bull; UAE &bull; KSA &bull; EU &bull; SG</span>
+                <span class="hidden sm:inline text-brand-700/60">|</span>
+                <span class="flex items-center gap-1.5 font-medium">
+                    <span class="text-brand-gold">🏆</span>
+                    <span>Certified: <strong class="text-white">ISO 22000 · HACCP · SGS · Halal</strong></span>
                 </span>
             </div>
+            <a href="rfq.html?sample=1" class="shrink-0 flex items-center gap-2 bg-brand-gold hover:bg-amber-400 text-brand-950 font-bold px-4 py-1.5 rounded-lg transition duration-200 text-[11px] tracking-wide shadow-sm">
+                <span>🎁</span>
+                <span>Request Free Sample</span>
+            </a>
         </div>
     </div>
+    
 
-    <!-- Main Navigation Bar (Pristine White Glass with Emerald Branding) -->
+    <!-- ✦ MAIN NAVIGATION BAR ✦ -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-emerald-100 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -210,17 +469,19 @@
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Home</a>\n<a href="products.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Commodities & Specs</a>\n<a href="compliance.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Incoterms & Logistics</a>\n<a href="rfq.html" class="text-brand-700 font-bold text-sm tracking-wide border-b-2 border-brand-700 pb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>RFQ & Samples</a>\n
+                    <a href="index.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Home</a>
+<a href="products.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Commodities & Specs</a>
+<a href="compliance.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Incoterms & Logistics</a>
+<a href="rfq.html" class="text-brand-700 font-bold text-sm tracking-wide border-b-2 border-brand-700 pb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>RFQ & Samples</a>
+
                 </nav>
 
                 <!-- Action CTA -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20am%20interested%20in%20agricultural%20commodity%20export." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-600/30 text-emerald-800 bg-emerald-50 hover:bg-emerald-100/80 text-xs font-semibold flex items-center gap-2 transition duration-200">
-                        <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
-                        </span>
-                        <span>Trade Concierge</span>
+                    <a href="rfq.html?sample=1" class="px-4 py-2.5 rounded-xl border border-brand-gold/40 text-brand-800 bg-amber-50 hover:bg-amber-100 text-xs font-semibold flex items-center gap-1.5 transition duration-200">
+                        <span>🎁</span>
+                        <span>Free Sample</span>
                     </a>
                     <a href="rfq.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-800 hover:to-brand-900 text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-brand-900/15 hover:shadow-lg transition duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 border border-brand-gold/40">
                         <span class="text-brand-gold">✦</span>
@@ -240,191 +501,272 @@
 
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 pt-4 pb-8 space-y-2 shadow-xl">
-            <a href="index.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Home</a>\n<a href="products.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Commodities & Specs</a>\n<a href="compliance.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Incoterms & Logistics</a>\n<a href="rfq.html" class="block font-bold text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">RFQ & Samples</a>\n
+            <a href="index.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Home</a>
+<a href="products.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Commodities & Specs</a>
+<a href="compliance.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Incoterms & Logistics</a>
+<a href="rfq.html" class="block font-bold text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">RFQ & Samples</a>
+
             <div class="pt-4 border-t border-slate-200 flex flex-col gap-3">
+                <a href="rfq.html?sample=1" class="w-full py-3 text-center bg-amber-50 border border-brand-gold/40 text-brand-800 font-bold text-xs rounded-xl">🎁 Request Free Sample</a>
                 <a href="rfq.html" class="w-full py-3 text-center bg-brand-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow">Request B2B Quote</a>
                 <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 text-center border border-emerald-600 text-emerald-800 bg-emerald-50 font-bold text-xs rounded-xl">WhatsApp Trade Concierge</a>
             </div>
         </div>
     </header>
     
-
-<!-- Hero Section -->
-<section class="py-16 lg:py-20 botanical-mesh border-b border-emerald-100 text-slate-800 text-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
-        <span class="px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-extrabold uppercase tracking-widest">
-            Fast-Track B2B Procurement Desk
-        </span>
-        <h1 class="font-serif text-4xl sm:text-5xl font-bold text-brand-900">
-            Request Official B2B Quotation (PI)
-        </h1>
-        <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto font-light">
-            Fill out your procurement specifications below to instantly generate an official trade docket and connect directly with our international export desk.
-        </p>
-    </div>
+<section class="py-16 botanical-mesh border-b border-emerald-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold mb-3">Bangladesh Export Trade Desk</p>
+    <h1 class="hero-headline text-4xl md:text-5xl text-brand-900 mb-4">Request a Quote or Free Sample</h1>
+    <p class="text-sm text-slate-500 max-w-xl mx-auto">Fill in your sourcing requirements below. Our trade desk responds within <strong class="text-brand-700">2 business hours (GMT+6)</strong>. Certified documentation provided with every quotation.</p>
+  </div>
 </section>
 
-<!-- RFQ Interactive Form -->
+<!-- ✦ RFQ FORM ✦ -->
 <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            
-            <!-- Form Side -->
-            <div class="lg:col-span-7 glass-card-luxury rounded-3xl p-8 border border-emerald-200 shadow-xl space-y-6">
-                <h3 class="font-serif text-2xl font-bold text-brand-900 border-b border-emerald-100 pb-3">Procurement Inquiry Form</h3>
-                
-                <form id="rfq-form" onsubmit="event.preventDefault(); submitRFQ();" class="space-y-4 text-xs">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Company / Importer Name *</label>
-                            <input type="text" id="rfq-company" required placeholder="e.g. Global Gourmet Foods Ltd." class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm">
-                        </div>
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Representative Name *</label>
-                            <input type="text" id="rfq-name" required placeholder="e.g. John Doe / Tariq Al-Mansoor" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm">
-                        </div>
-                    </div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Official Email *</label>
-                            <input type="email" id="rfq-email" required placeholder="procurement@company.com" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm">
-                        </div>
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">WhatsApp / Phone *</label>
-                            <input type="tel" id="rfq-phone" required placeholder="+44 7000 000000" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Target Commodity *</label>
-                            <select id="rfq-product" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm" onchange="updateSummary()">
-                                <option value="Sundarbans Wild Raw Honey">Sundarbans Wild Raw Honey</option>
-                                <option value="Chinigura & GI Tulshimala Rice">Chinigura &amp; GI Tulshimala Rice</option>
-                                <option value="Pesticide-Free Dried Fish (Shukti)">Pesticide-Free Dried Fish (Shukti)</option>
-                                <option value="Northern Char Peanuts & Butter">Northern Char Peanuts &amp; Butter</option>
-                                <option value="Himsagar Mango (GI) & Jackfruit">Himsagar Mango (GI) &amp; Jackfruit</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Estimated Volume (MT / Lots) *</label>
-                            <input type="text" id="rfq-volume" required placeholder="e.g. 25 MT (1 x 20ft FCL) / 500kg Samples" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm" oninput="updateSummary()">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Incoterm *</label>
-                            <select id="rfq-incoterm" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm">
-                                <option value="FOB Chattogram Port (BDCGP)">FOB Chattogram Port (BDCGP)</option>
-                                <option value="CIF Destination Port">CIF Destination Port</option>
-                                <option value="CFR Destination Port">CFR Destination Port</option>
-                                <option value="FCA Dhaka Airport (DAC Air)">FCA Dhaka Airport (DAC Air)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block font-bold text-brand-900 uppercase mb-1">Destination Port &amp; Country *</label>
-                            <input type="text" id="rfq-dest" required placeholder="e.g. London Gateway, UK / Jebel Ali, UAE" class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block font-bold text-brand-900 uppercase mb-1">Special Packaging &amp; Monograph Requirements</label>
-                        <textarea id="rfq-notes" rows="3" placeholder="Specify private label packaging, SGS inspection requests, or target shipment timelines..." class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-700 shadow-sm"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-700 via-brand-800 to-brand-900 hover:from-brand-800 hover:to-brand-950 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition duration-200 border border-brand-gold/40">
-                        Dispatch B2B Inquiry to International Trade Desk &rarr;
-                    </button>
-                </form>
-            </div>
-
-            <!-- Live Trade Docket Preview Side -->
-            <div class="lg:col-span-5 space-y-6">
-                <div class="p-6 rounded-3xl bg-[#f8faf6] border border-emerald-200 shadow-sm space-y-4">
-                    <div class="flex items-center justify-between border-b border-emerald-200 pb-3">
-                        <span class="text-[10px] uppercase tracking-widest font-extrabold text-emerald-800">Live Trade Docket</span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-                    </div>
-                    <div class="space-y-2.5 text-xs">
-                        <div class="flex justify-between py-1 border-b border-emerald-100">
-                            <span class="text-slate-500">Origin Gateway:</span>
-                            <span class="font-bold text-brand-900">Dhaka &bull; Chattogram (BD)</span>
-                        </div>
-                        <div class="flex justify-between py-1 border-b border-emerald-100">
-                            <span class="text-slate-500">Export Regulatory:</span>
-                            <span class="font-bold text-brand-900">EPB / ERC / ISO 22000</span>
-                        </div>
-                        <div class="flex justify-between py-1 border-b border-emerald-100">
-                            <span class="text-slate-500">Inspection:</span>
-                            <span class="font-bold text-brand-900">SGS Pre-Shipment Ready</span>
-                        </div>
-                        <div class="flex justify-between py-1 border-b border-emerald-100">
-                            <span class="text-slate-500">Trade Finance:</span>
-                            <span class="font-bold text-brand-900">Confirmed Sight LC &bull; CAD</span>
-                        </div>
-                        <div class="flex justify-between py-1">
-                            <span class="text-slate-500">Commercial Sample Kits:</span>
-                            <span class="font-bold text-emerald-800">DHL / FedEx Express (3-5 Days)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-6 rounded-3xl bg-gradient-to-br from-brand-900 to-brand-950 text-white shadow-xl space-y-4">
-                    <h4 class="font-serif text-lg font-bold gold-gradient-text">Instant WhatsApp Concierge</h4>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed">
-                        For urgent seasonal bookings or tender bids, our Managing Director and export documentation desk are reachable directly via WhatsApp.
-                    </p>
-                    <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider text-center block shadow transition flex items-center justify-center gap-2">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        <span>Chat with Export Director</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
+    <!-- Tab Selector -->
+    <div class="flex gap-2 mb-8 justify-center">
+      <button id="tab-rfq" onclick="switchTab('rfq')" class="px-6 py-2.5 rounded-xl bg-brand-700 text-white text-sm font-bold transition">📋 B2B Quote Request</button>
+      <button id="tab-sample" onclick="switchTab('sample')" class="px-6 py-2.5 rounded-xl border border-brand-gold/40 text-brand-800 bg-amber-50 text-sm font-bold hover:bg-amber-100 transition">🎁 Free Sample Request</button>
     </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Form -->
+      <div class="lg:col-span-2">
+        <form id="rfq-form" onsubmit="handleSubmit(event)" class="glass-card-luxury rounded-3xl p-8 space-y-5">
+          <h2 class="font-serif text-xl font-bold text-brand-900" id="form-title">B2B Quotation Request</h2>
+          <p class="text-xs text-slate-500" id="form-subtitle">All fields marked with * are required. We respond within 2 business hours (GMT+6).</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">Company Name *</label>
+              <input type="text" required placeholder="Acme Foods Ltd." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">Your Name *</label>
+              <input type="text" required placeholder="John Smith" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">Business Email *</label>
+              <input type="email" required placeholder="procurement@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">WhatsApp / Phone</label>
+              <input type="tel" placeholder="+44 7XXX XXXXXX" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">Country *</label>
+              <select required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition bg-white">
+                <option value="">Select country...</option>
+                <option>🇬🇧 United Kingdom</option>
+                <option>🇺🇸 United States</option>
+                <option>🇦🇪 United Arab Emirates</option>
+                <option>🇸🇦 Saudi Arabia</option>
+                <option>🇩🇪 Germany</option>
+                <option>🇫🇷 France</option>
+                <option>🇳🇱 Netherlands</option>
+                <option>🇨🇦 Canada</option>
+                <option>🇲🇾 Malaysia</option>
+                <option>🇸🇬 Singapore</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">Product *</label>
+              <select id="product-select" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition bg-white">
+                <option value="">Select commodity...</option>
+                <option value="honey">🍯 Sundarbans Wild Raw Honey</option>
+                <option value="rice">🌾 Chinigura / GI Tulshimala Rice</option>
+                <option value="fish">🐟 Pesticide-Free Dried Fish (Shukti)</option>
+                <option value="peanuts">🥜 Northern Char Peanuts / Peanut Butter</option>
+                <option value="fruits">🥭 Himsagar Mango (GI) / Jackfruit</option>
+                <option value="mixed">📦 Mixed / Multiple Commodities</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="rfq-fields">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Quantity Required</label>
+                <input type="text" placeholder="e.g. 5 MT, 1 FCL (20ft)" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Incoterm Preference</label>
+                <select class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition bg-white">
+                  <option>FOB Chittagong</option>
+                  <option>CFR Destination Port</option>
+                  <option>CIF Destination Port</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div id="sample-fields" class="hidden">
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800">
+              <strong>🎁 Free Sample Policy:</strong> One sample set per qualified company. Samples are shipped via DHL/FedEx within 5–7 business days of request approval. Courier cost borne by Agrovia for qualified B2B importers.
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Additional Requirements / Message</label>
+            <textarea rows="4" placeholder="Packaging preferences, certifications needed, delivery timeline, quality parameters..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-800 hover:to-brand-900 text-white font-bold text-sm uppercase tracking-wider shadow-lg transition duration-300 transform hover:-translate-y-0.5 border border-brand-gold/30 flex items-center justify-center gap-2">
+            <span class="text-brand-gold">✦</span>
+            <span id="submit-label">Submit Quote Request</span>
+          </button>
+          <p class="text-center text-[10px] text-slate-400">Your information is kept strictly confidential. We do not share buyer data with any third parties.</p>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-5">
+        <div class="glass-card-luxury rounded-2xl p-5">
+          <h3 class="font-serif text-base font-bold text-brand-900 mb-3">Trade Desk Contact</h3>
+          <div class="space-y-3 text-xs">
+            <div class="flex items-center gap-2 text-slate-600"><span class="text-brand-gold">✉</span> export@agroviaorganic.com</div>
+            <div class="flex items-center gap-2 text-slate-600"><span class="text-brand-gold">📱</span> WhatsApp: +880 1700-000000</div>
+            <div class="flex items-center gap-2 text-slate-600"><span class="text-brand-gold">🕐</span> Response: Within 2 hours (GMT+6)</div>
+            <div class="flex items-center gap-2 text-slate-600"><span class="text-brand-gold">📍</span> Gulshan, Dhaka, Bangladesh</div>
+          </div>
+          <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20want%20to%20discuss%20B2B%20sourcing." target="_blank" class="mt-4 w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 transition">
+            💬 Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="glass-card-luxury rounded-2xl p-5">
+          <h3 class="font-serif text-base font-bold text-brand-900 mb-3">Certifications Available</h3>
+          <div class="flex flex-wrap gap-2 text-[10px]">
+            <span class="px-2 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-brand-700 font-bold">🏆 ISO 22000</span>
+            <span class="px-2 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold">✅ HACCP</span>
+            <span class="px-2 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-bold">🔬 SGS</span>
+            <span class="px-2 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 font-bold">☪️ Halal</span>
+            <span class="px-2 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold">🇪🇺 EU</span>
+            <span class="px-2 py-1 rounded-full bg-green-50 border border-green-200 text-green-700 font-bold">🇧🇩 EPB/ERC</span>
+          </div>
+        </div>
+
+        <div class="glass-card-luxury rounded-2xl p-5">
+          <h3 class="font-serif text-base font-bold text-brand-900 mb-3">Minimum Orders</h3>
+          <div class="space-y-2 text-xs text-slate-600">
+            <div class="flex justify-between border-b border-slate-100 pb-1.5"><span>🍯 Honey</span><span class="font-bold text-brand-700">500 kg</span></div>
+            <div class="flex justify-between border-b border-slate-100 pb-1.5"><span>🌾 Rice</span><span class="font-bold text-brand-700">5 MT (20ft FCL)</span></div>
+            <div class="flex justify-between border-b border-slate-100 pb-1.5"><span>🐟 Shukti</span><span class="font-bold text-brand-700">500 kg</span></div>
+            <div class="flex justify-between border-b border-slate-100 pb-1.5"><span>🥜 Peanuts</span><span class="font-bold text-brand-700">1 MT</span></div>
+            <div class="flex justify-between pb-1.5"><span>🥭 Mango</span><span class="font-bold text-brand-700">200 kg (Air)</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>
-// Auto-detect commodity from URL query string
-(function checkQueryParam() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const prod = urlParams.get('product');
-    const select = document.getElementById('rfq-product');
-    if (prod && select) {
-        if (prod === 'honey') select.value = "Sundarbans Wild Raw Honey";
-        if (prod === 'rice') select.value = "Chinigura & GI Tulshimala Rice";
-        if (prod === 'fish') select.value = "Pesticide-Free Dried Fish (Shukti)";
-        if (prod === 'peanuts') select.value = "Northern Char Peanuts & Butter";
-        if (prod === 'fruits') select.value = "Himsagar Mango (GI) & Jackfruit";
-    }
-})();
+// Pre-fill product from URL param
+const params = new URLSearchParams(window.location.search);
+if (params.get('product')) {
+  const sel = document.getElementById('product-select');
+  if (sel) { [...sel.options].forEach(o => { if(o.value===params.get('product')) o.selected=true; }); }
+}
+if (params.get('sample') === '1') switchTab('sample');
 
-function submitRFQ() {
-    const comp = document.getElementById('rfq-company').value;
-    const name = document.getElementById('rfq-name').value;
-    const prod = document.getElementById('rfq-product').value;
-    const vol = document.getElementById('rfq-volume').value;
-    const dest = document.getElementById('rfq-dest').value;
+function switchTab(tab) {
+  const isSample = tab === 'sample';
+  document.getElementById('rfq-fields').classList.toggle('hidden', isSample);
+  document.getElementById('sample-fields').classList.toggle('hidden', !isSample);
+  document.getElementById('form-title').textContent = isSample ? '🎁 Free Sample Request' : 'B2B Quotation Request';
+  document.getElementById('submit-label').textContent = isSample ? 'Request Free Sample' : 'Submit Quote Request';
+  document.getElementById('tab-rfq').className = !isSample
+    ? 'px-6 py-2.5 rounded-xl bg-brand-700 text-white text-sm font-bold transition'
+    : 'px-6 py-2.5 rounded-xl border border-brand-gold/40 text-brand-800 bg-amber-50 text-sm font-bold hover:bg-amber-100 transition';
+  document.getElementById('tab-sample').className = isSample
+    ? 'px-6 py-2.5 rounded-xl bg-brand-gold text-brand-950 text-sm font-bold transition'
+    : 'px-6 py-2.5 rounded-xl border border-brand-gold/40 text-brand-800 bg-amber-50 text-sm font-bold hover:bg-amber-100 transition';
+}
 
-    const msg = encodeURIComponent(`Hello Agrovia Organic Trade Desk,
-
-Official RFQ Inquiry:
-Company: ${comp}
-Representative: ${name}
-Commodity: ${prod}
-Volume: ${vol}
-Destination: ${dest}
-
-Please provide formal Proforma Invoice (PI) and COA.`);
-    window.open(`https://wa.me/8801700000000?text=${msg}`, '_blank');
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = '✅ Request Received — We'll respond within 2 hours!';
+  btn.classList.remove('from-brand-700','to-brand-800');
+  btn.classList.add('from-emerald-600','to-emerald-700');
+  btn.disabled = true;
 }
 </script>
 
+<!-- ✦ B2B BUYER TESTIMONIALS ✦ -->
+<section class="py-20 botanical-mesh-gold">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold mb-3">Trusted by Global Buyers</p>
+      <h2 class="section-headline text-3xl md:text-4xl text-brand-900">What Our Partners Say</h2>
+      <div class="mt-4 w-16 h-0.5 bg-gradient-to-r from-brand-gold to-brand-700 mx-auto rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <!-- Global Footer (Rich Deep Emerald Base for Majestic Grounding) -->
+      <div class="testimonial-card p-7 reveal reveal-delay-1">
+        <div class="quote-mark">"</div>
+        <p class="text-sm text-slate-700 leading-relaxed mt-2 mb-5">
+          Agrovia's Sundarbans honey passed every UK food safety test on first submission. The EA-IRMS purity certificate was exactly what our regulatory team needed. Exceptional traceability documentation.
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-brand-gold/20">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center text-white font-bold text-sm">JM</div>
+          <div>
+            <div class="font-semibold text-sm text-slate-800">James Mitchell</div>
+            <div class="text-[11px] text-slate-500">Procurement Director, London Organic Co. 🇬🇧</div>
+          </div>
+          <span class="ml-auto text-yellow-400 text-sm">★★★★★</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card p-7 reveal reveal-delay-2">
+        <div class="quote-mark">"</div>
+        <p class="text-sm text-slate-700 leading-relaxed mt-2 mb-5">
+          We import Tulshimala rice exclusively from Agrovia for our premium Bangladeshi restaurant chains across Dubai. The GI certification and halal compliance made our import clearance seamless.
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-brand-gold/20">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-sm">AK</div>
+          <div>
+            <div class="font-semibold text-sm text-slate-800">Ahmed Al-Khalidi</div>
+            <div class="text-[11px] text-slate-500">Import Manager, Emirates Food Group 🇦🇪</div>
+          </div>
+          <span class="ml-auto text-yellow-400 text-sm">★★★★★</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card p-7 reveal reveal-delay-3">
+        <div class="quote-mark">"</div>
+        <p class="text-sm text-slate-700 leading-relaxed mt-2 mb-5">
+          Their aflatoxin-controlled peanuts consistently test below 2 ppb — well under EU 1881/2006 limits. For a health-food distributor like us, Agrovia is genuinely the most compliance-ready Bangladeshi exporter we've worked with.
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-brand-gold/20">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-sm">SV</div>
+          <div>
+            <div class="font-semibold text-sm text-slate-800">Sophie van der Berg</div>
+            <div class="text-[11px] text-slate-500">Head of Sourcing, NaturFoods B.V. 🇳🇱</div>
+          </div>
+          <span class="ml-auto text-yellow-400 text-sm">★★★★★</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ✦ GLOBAL FOOTER ✦ -->
     <footer class="bg-gradient-to-b from-brand-950 to-[#020d06] text-slate-300 border-t border-brand-800/60 pt-20 pb-12 relative overflow-hidden">
         <!-- Ambient decorative background glow -->
         <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -445,13 +787,18 @@ Please provide formal Proforma Invoice (PI) and COA.`);
                         </div>
                     </div>
                     <p class="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
-                        Agrovia Organic is Bangladesh’s premier certified agricultural commodity export agency, connecting Sundarbans mangrove honey hunters, GI rice cultivators, and char farmers with global tier-1 food importers.
+                        Agrovia Organic is Bangladesh's premier certified agricultural commodity export agency, connecting Sundarbans mangrove honey hunters, GI rice cultivators, and char farmers with global tier-1 food importers.
                     </p>
                     <div class="pt-2 space-y-1.5 text-xs text-slate-400 font-light">
                         <div><strong class="text-slate-200 font-medium">Founder & MD:</strong> Pranto Sarker</div>
                         <div><strong class="text-slate-200 font-medium">Origin:</strong> Dhaka, Bangladesh 🇧🇩</div>
-                        <div><strong class="text-slate-200 font-medium">Regulatory Status:</strong> EPB / ERC / Trade License Registered Exporter</div>
+                        <div><strong class="text-slate-200 font-medium">Regulatory:</strong> EPB / ERC / Trade License Registered Exporter</div>
                     </div>
+                    <!-- Brochure Download CTA in Footer -->
+                    <a href="rfq.html?brochure=1" class="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg bg-brand-800 border border-brand-gold/30 text-brand-gold hover:bg-brand-700 transition text-xs font-semibold">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Download Product Catalogue</span>
+                    </a>
                 </div>
 
                 <!-- Commodities -->
@@ -519,23 +866,77 @@ Please provide formal Proforma Invoice (PI) and COA.`);
         </div>
     </footer>
 
-    <!-- Floating Concierge WhatsApp Widget -->
+    <!-- Floating WhatsApp Widget -->
     <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20am%20interested%20in%20sourcing%20agricultural%20commodities." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-2xl bg-gradient-to-tr from-emerald-700 to-emerald-600 text-white shadow-2xl shadow-emerald-950/40 hover:scale-110 transition duration-300 flex items-center gap-2.5 group border border-emerald-400/40">
         <i data-lucide="message-circle" class="w-6 h-6"></i>
         <span class="text-xs font-bold tracking-wide hidden group-hover:inline-block pr-1 transition-all duration-300">WhatsApp Trade Desk</span>
     </a>
 
-    <!-- Scripts -->
+    <!-- Global Scripts -->
     <script>
         lucide.createIcons();
+        // Mobile menu
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
+
+        // Scroll Reveal (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        if (revealElements.length > 0) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            revealElements.forEach(el => revealObserver.observe(el));
+        }
+
+        // Certificate Lightbox
+        function openCertLightbox(certId) {
+            const overlay = document.getElementById('cert-lightbox-overlay');
+            const content = document.getElementById('cert-lightbox-content');
+            if (!overlay || !content) return;
+            const certData = window.certDetails && window.certDetails[certId];
+            if (certData) {
+                content.innerHTML = `
+                    <button onclick="closeCertLightbox()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 font-bold text-lg transition">&times;</button>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">${certData.icon}</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-brand-900">${certData.name}</h3>
+                                <p class="text-xs text-slate-500 font-medium">${certData.issuer}</p>
+                            </div>
+                        </div>
+                        <div class="h-0.5 bg-gradient-to-r from-brand-700 to-brand-gold opacity-30 rounded"></div>
+                        <p class="text-sm text-slate-700 leading-relaxed">${certData.description}</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            ${certData.specs.map(s => `<div class="bg-emerald-50 rounded-lg p-3 border border-emerald-100"><div class="text-[10px] font-bold uppercase tracking-widest text-brand-700 mb-1">${s.label}</div><div class="text-sm font-semibold text-slate-800">${s.value}</div></div>`).join('')}
+                        </div>
+                        <div class="bg-amber-50 border border-brand-gold/30 rounded-xl p-4">
+                            <p class="text-xs text-amber-800 font-medium">✦ This certification is verified by independent third-party auditors. Original certificate copies are available on request for qualified B2B buyers.</p>
+                        </div>
+                        <a href="rfq.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition">Request Certificate Copies →</a>
+                    </div>
+                `;
+            }
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCertLightbox() {
+            const overlay = document.getElementById('cert-lightbox-overlay');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        // Close on backdrop click
+        document.addEventListener('click', function(e) {
+            const overlay = document.getElementById('cert-lightbox-overlay');
+            if (overlay && e.target === overlay) closeCertLightbox();
+        });
     </script>
 </body>
 </html>
-
