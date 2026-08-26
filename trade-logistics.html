@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Trade Finance, Logistics & Incoterms 2020 | AGROVIA ORGANIC</title>
-    <meta name="description" content="Export gateways, ocean and air freight schedules, payment terms (Confirmed Sight LC, CAD), and regulatory trade documentation from Dhaka and Chattogram.">
+    <title>Incoterms & Trade Logistics | AGROVIA ORGANIC</title>
+    <meta name="description" content="Agrovia Organic export logistics: port gateways, transit times, Incoterms 2020, banking terms, container specifications, and seasonal product availability calendar.">
     <meta name="keywords" content="Bangladesh agro export, Sundarbans honey, Chinigura rice, GI Tulshimala, dried fish shukti, char peanuts, Himsagar mango, organic agro exporter, ISO 22000, HACCP, Halal export">
     <meta name="author" content="Pranto Sarker, AGROVIA ORGANIC">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agrovia-organic.vercel.app/">
-    <meta property="og:title" content="International Trade Finance, Logistics & Incoterms 2020 | AGROVIA ORGANIC">
-    <meta property="og:description" content="Export gateways, ocean and air freight schedules, payment terms (Confirmed Sight LC, CAD), and regulatory trade documentation from Dhaka and Chattogram.">
+    <meta property="og:title" content="Incoterms & Trade Logistics | AGROVIA ORGANIC">
+    <meta property="og:description" content="Agrovia Organic export logistics: port gateways, transit times, Incoterms 2020, banking terms, container specifications, and seasonal product availability calendar.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1200&auto=format&fit=crop">
     <meta property="twitter:card" content="summary_large_image">
 
     <!-- Favicon (SVG Organic Emblem) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314532d'/%3E%3Cpath d='M16 6c0 0-8 5-8 12a8 8 0 0 0 16 0C24 11 16 6 16 6z' fill='%23e6a838' opacity='0.9'/%3E%3Cpath d='M16 10c0 0-5 3.5-5 8a5 5 0 0 0 10 0C21 13.5 16 10 16 10z' fill='%23166534'/%3E%3C/svg%3E">
     
-    <!-- Premium Google Fonts: Cormorant Garamond (Heritage Editorial Luxury Serif) + Outfit & Plus Jakarta Sans (Modern Export UI) -->
+    <!-- Premium Google Fonts: Playfair Display (Luxury Serif) + Outfit + Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -51,14 +51,19 @@
                     },
                     fontFamily: {
                         sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-                        display: ['"Cormorant Garamond"', 'serif'],
+                        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+                        display: ['"Playfair Display"', 'serif'],
+                        legacy: ['"Cormorant Garamond"', 'Georgia', 'serif'],
                     },
                     animation: {
                         'float-gentle': 'floatGentle 6s ease-in-out infinite',
                         'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
                         'shimmer-gold': 'shimmerGold 3s infinite linear',
                         'breeze': 'breeze 8s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.7s ease forwards',
+                        'fade-in': 'fadeIn 0.8s ease forwards',
+                        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
+                        'ticker': 'ticker 30s linear infinite',
                     },
                     keyframes: {
                         floatGentle: {
@@ -76,7 +81,23 @@
                         breeze: {
                             '0%, 100%': { transform: 'translateX(0px)' },
                             '50%': { transform: 'translateX(15px)' },
-                        }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        pulseDot: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.6)', opacity: '0.4' },
+                        },
+                        ticker: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
                     }
                 }
             }
@@ -87,19 +108,48 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Luxury Gold & Emerald Gradients */
+        /* ==============================
+           LUXURY TYPOGRAPHY SYSTEM
+           ============================== */
+        .hero-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .section-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .gold-shimmer-text {
+            background: linear-gradient(90deg, #b47b18, #d49a26, #f0c040, #e6a838, #b47b18);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerGold 4s linear infinite;
+        }
+
+        /* ==============================
+           GOLD & EMERALD GRADIENTS
+           ============================== */
         .gold-gradient-text {
             background: linear-gradient(135deg, #b47b18 0%, #d49a26 40%, #e6a838 70%, #9a6510 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .emerald-gradient-text {
             background: linear-gradient(135deg, #0f3d21 0%, #15803d 50%, #14532d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        /* Clean Light Botanical Mesh Background */
+        /* ==============================
+           BOTANICAL MESH BACKGROUNDS
+           ============================== */
         .botanical-mesh {
             background-color: #ffffff;
             background-image: 
@@ -113,8 +163,16 @@
                 radial-gradient(at 10% 20%, rgba(20, 83, 45, 0.04) 0px, transparent 40%),
                 radial-gradient(at 90% 80%, rgba(212, 154, 38, 0.05) 0px, transparent 50%);
         }
+        .botanical-mesh-gold {
+            background-color: #fffbf0;
+            background-image:
+                radial-gradient(at 20% 10%, rgba(212, 154, 38, 0.08) 0px, transparent 50%),
+                radial-gradient(at 80% 90%, rgba(20, 83, 45, 0.05) 0px, transparent 50%);
+        }
 
-        /* Luxury Glassmorphism for Light Canvas */
+        /* ==============================
+           GLASSMORPHISM CARDS
+           ============================== */
         .glass-card-luxury {
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
@@ -122,7 +180,6 @@
             border: 1px solid rgba(20, 83, 45, 0.12);
             box-shadow: 0 20px 40px -15px rgba(20, 83, 45, 0.07), 0 0 1px 1px rgba(212, 154, 38, 0.15);
         }
-        
         .card-hover-organic {
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -131,7 +188,6 @@
             border-color: rgba(212, 154, 38, 0.45);
             box-shadow: 0 25px 50px -12px rgba(20, 83, 45, 0.14), 0 0 25px 2px rgba(212, 154, 38, 0.2);
         }
-        
         .image-zoom-subtle {
             transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -139,14 +195,14 @@
             transform: scale(1.07);
         }
 
-        /* Organic Seal Stamp Effect */
+        /* ==============================
+           ORGANIC SEAL & BUTTONS
+           ============================== */
         .organic-seal {
             border: 2px dashed #d49a26;
             border-radius: 9999px;
             box-shadow: inset 0 0 12px rgba(212, 154, 38, 0.15);
         }
-
-        /* Shimmering Button */
         .btn-gold-shimmer {
             background: linear-gradient(90deg, #d49a26 0%, #f59e0b 50%, #d49a26 100%);
             background-size: 200% auto;
@@ -155,45 +211,248 @@
         .btn-gold-shimmer:hover {
             background-position: right center;
         }
+        .btn-sample {
+            background: linear-gradient(135deg, rgba(20,83,45,0.08) 0%, rgba(20,83,45,0.12) 100%);
+            border: 1.5px solid rgba(20,83,45,0.3);
+            color: #14532d;
+            transition: all 0.3s ease;
+        }
+        .btn-sample:hover {
+            background: linear-gradient(135deg, #14532d 0%, #0f3d21 100%);
+            color: #ffffff;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(20,83,45,0.25);
+        }
+
+        /* ==============================
+           SCROLL REVEAL ANIMATIONS
+           ============================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-35px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(35px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ==============================
+           TESTIMONIAL CARDS
+           ============================== */
+        .testimonial-card {
+            background: linear-gradient(145deg, #fffbf0 0%, #ffffff 100%);
+            border: 1px solid rgba(212, 154, 38, 0.25);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 30px rgba(20,83,45,0.06), 0 2px 8px rgba(212,154,38,0.1);
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(20,83,45,0.1), 0 4px 12px rgba(212,154,38,0.2);
+            border-color: rgba(212, 154, 38, 0.5);
+        }
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            color: #d49a26;
+            opacity: 0.3;
+        }
+
+        /* ==============================
+           LIGHTBOX (CERTIFICATE VIEWER)
+           ============================== */
+        .cert-lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(3, 20, 10, 0.92);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .cert-lightbox-overlay.active {
+            display: flex;
+        }
+        .cert-lightbox-content {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 720px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 2px solid rgba(212,154,38,0.4);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .cert-card {
+            cursor: pointer;
+            border: 1px solid rgba(20,83,45,0.15);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            background: white;
+        }
+        .cert-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: rgba(212,154,38,0.5);
+            box-shadow: 0 15px 35px rgba(20,83,45,0.15), 0 0 0 2px rgba(212,154,38,0.3);
+        }
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ==============================
+           ORIGIN MAP STYLES
+           ============================== */
+        .origin-region {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .origin-region:hover .region-fill {
+            filter: brightness(1.2);
+        }
+        .origin-dot {
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+        .origin-tooltip {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(4px);
+        }
+        .origin-region:hover .origin-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==============================
+           COUNTRY FLAGS STRIP
+           ============================== */
+        .country-flag-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.875rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        .country-flag-item:hover {
+            background: rgba(20,83,45,0.06);
+            border-color: rgba(212,154,38,0.3);
+            transform: translateY(-3px);
+        }
+        .flag-emoji {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        /* ==============================
+           STICKY SMART QUOTE BAR
+           ============================== */
+        #smart-quote-bar {
+            position: relative;
+            z-index: 60;
+        }
+
+        /* ==============================
+           PDF BROCHURE BUTTON
+           ============================== */
+        .btn-brochure {
+            background: linear-gradient(135deg, #14532d 0%, #0f3d21 100%);
+            color: white;
+            border: 1.5px solid rgba(212,154,38,0.5);
+            border-radius: 0.875rem;
+            padding: 0.85rem 1.75rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.35s ease;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(20,83,45,0.2);
+        }
+        .btn-brochure:hover {
+            background: linear-gradient(135deg, #0f3d21 0%, #072413 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(20,83,45,0.3);
+            border-color: rgba(212,154,38,0.8);
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-[#ffffff] antialiased selection:bg-brand-100 selection:text-brand-800 relative">
 
-
-    <!-- Top Global Notification Ribbon (Light Organic Luxury) -->
-    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-[11px] py-2 px-4 border-b border-brand-700/50 shadow-sm">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-4 flex-wrap justify-center font-light tracking-wide">
-                <span class="flex items-center gap-1.5 text-brand-gold font-medium">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                    <span>Govt. Certified Exporter &bull; EPB / ERC Registered Bangladesh</span>
+    <!-- ✦ SMART QUOTE BAR ✦ -->
+    
+    <!-- ✦ STICKY SMART QUOTE BAR ✦ -->
+    <div id="smart-quote-bar" class="bg-gradient-to-r from-brand-700 via-brand-800 to-brand-700 border-b border-brand-gold/20 py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px]">
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-emerald-100">
+                <span class="flex items-center gap-1.5 font-medium">
+                    <span class="text-brand-gold">📦</span>
+                    <span>Min. Order: <strong class="text-white">500 kg</strong></span>
                 </span>
-                <span class="hidden md:inline text-brand-600">|</span>
-                <span class="flex items-center gap-1.5 text-emerald-200">
-                    <i data-lucide="sprout" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>100% Traceable Direct Farmer Sourcing</span>
+                <span class="hidden sm:inline text-brand-700/60">|</span>
+                <span class="flex items-center gap-1.5 font-medium">
+                    <span class="text-brand-gold">✈</span>
+                    <span>Ships to: <strong class="text-white">UK · USA · UAE · KSA · EU · CA · MY · SG</strong></span>
                 </span>
-                <span class="hidden md:inline text-brand-600">|</span>
-                <span class="flex items-center gap-1.5 text-slate-200">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>ISO 22000 &bull; HACCP &bull; SGS Pre-Shipment Ready</span>
-                </span>
-            </div>
-            <div class="flex items-center gap-4 text-[11px]">
-                <a href="rfq.html" class="text-brand-gold hover:text-white transition font-semibold flex items-center gap-1">
-                    <i data-lucide="send" class="w-3 h-3"></i>
-                    <span>Fast-Track RFQ Desk</span>
-                </a>
-                <span class="text-brand-700">|</span>
-                <span class="text-slate-300 flex items-center gap-1">
-                    <i data-lucide="globe-2" class="w-3 h-3 text-brand-gold"></i>
-                    <span>UK &bull; USA &bull; UAE &bull; KSA &bull; EU &bull; SG</span>
+                <span class="hidden sm:inline text-brand-700/60">|</span>
+                <span class="flex items-center gap-1.5 font-medium">
+                    <span class="text-brand-gold">🏆</span>
+                    <span>Certified: <strong class="text-white">ISO 22000 · HACCP · SGS · Halal</strong></span>
                 </span>
             </div>
+            <a href="rfq.html?sample=1" class="shrink-0 flex items-center gap-2 bg-brand-gold hover:bg-amber-400 text-brand-950 font-bold px-4 py-1.5 rounded-lg transition duration-200 text-[11px] tracking-wide shadow-sm">
+                <span>🎁</span>
+                <span>Request Free Sample</span>
+            </a>
         </div>
     </div>
+    
 
-    <!-- Main Navigation Bar (Pristine White Glass with Emerald Branding) -->
+    <!-- ✦ MAIN NAVIGATION BAR ✦ -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-emerald-100 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -210,17 +469,19 @@
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Home</a>\n<a href="products.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Commodities & Specs</a>\n<a href="compliance.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="text-brand-700 font-bold text-sm tracking-wide border-b-2 border-brand-700 pb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>Incoterms & Logistics</a>\n<a href="rfq.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">RFQ & Samples</a>\n
+                    <a href="index.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Home</a>
+<a href="products.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Commodities & Specs</a>
+<a href="compliance.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="text-brand-700 font-bold text-sm tracking-wide border-b-2 border-brand-700 pb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>Incoterms & Logistics</a>
+<a href="rfq.html" class="text-slate-600 font-medium text-sm tracking-wide hover:text-brand-700 transition duration-200">RFQ & Samples</a>
+
                 </nav>
 
                 <!-- Action CTA -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic%20Trade%20Desk,%20I%20am%20interested%20in%20agricultural%20commodity%20export." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-600/30 text-emerald-800 bg-emerald-50 hover:bg-emerald-100/80 text-xs font-semibold flex items-center gap-2 transition duration-200">
-                        <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
-                        </span>
-                        <span>Trade Concierge</span>
+                    <a href="rfq.html?sample=1" class="px-4 py-2.5 rounded-xl border border-brand-gold/40 text-brand-800 bg-amber-50 hover:bg-amber-100 text-xs font-semibold flex items-center gap-1.5 transition duration-200">
+                        <span>🎁</span>
+                        <span>Free Sample</span>
                     </a>
                     <a href="rfq.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-800 hover:from-brand-800 hover:to-brand-900 text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-brand-900/15 hover:shadow-lg transition duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 border border-brand-gold/40">
                         <span class="text-brand-gold">✦</span>
@@ -240,113 +501,264 @@
 
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 pt-4 pb-8 space-y-2 shadow-xl">
-            <a href="index.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Home</a>\n<a href="products.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Commodities & Specs</a>\n<a href="compliance.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Lab Standards & QA</a>\n<a href="trade-logistics.html" class="block font-bold text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">Incoterms & Logistics</a>\n<a href="rfq.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">RFQ & Samples</a>\n
+            <a href="index.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Home</a>
+<a href="products.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Commodities & Specs</a>
+<a href="compliance.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">Lab Standards & QA</a>
+<a href="trade-logistics.html" class="block font-bold text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">Incoterms & Logistics</a>
+<a href="rfq.html" class="block font-medium text-slate-700 py-2.5 px-3 hover:bg-slate-50 hover:text-brand-700">RFQ & Samples</a>
+
             <div class="pt-4 border-t border-slate-200 flex flex-col gap-3">
+                <a href="rfq.html?sample=1" class="w-full py-3 text-center bg-amber-50 border border-brand-gold/40 text-brand-800 font-bold text-xs rounded-xl">🎁 Request Free Sample</a>
                 <a href="rfq.html" class="w-full py-3 text-center bg-brand-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow">Request B2B Quote</a>
                 <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3 text-center border border-emerald-600 text-emerald-800 bg-emerald-50 font-bold text-xs rounded-xl">WhatsApp Trade Concierge</a>
             </div>
         </div>
     </header>
     
-
-<!-- Hero Section -->
-<section class="py-16 lg:py-24 botanical-mesh border-b border-emerald-100 text-slate-800 text-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-        <span class="px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-extrabold uppercase tracking-widest">
-            Incoterms 2020 &bull; Sight LC UCP 600 &bull; Chattogram Port (BDCGP)
-        </span>
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-900 leading-tight">
-            Seamless Global <br>
-            <span class="gold-gradient-text italic font-normal">Export Logistics</span>
-        </h1>
-        <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Institutional trade finance structures, swift customs clearance, and cold chain shipping from Bangladesh’s premier maritime and aviation hubs.
-        </p>
-    </div>
+<section class="py-16 botanical-mesh border-b border-emerald-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold mb-3">End-to-End Export Operations</p>
+    <h1 class="hero-headline text-4xl md:text-5xl text-brand-900 mb-4">Incoterms & Logistics</h1>
+    <p class="text-sm text-slate-500 max-w-2xl mx-auto">From Chittagong Port to your warehouse — seamless, documented, and fully insured.</p>
+  </div>
 </section>
 
-<!-- Port Gateways & Shipping Durations -->
-<section class="py-20 bg-white border-b border-emerald-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <!-- Sea Freight -->
-            <div class="p-8 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-6">
-                <div class="flex items-center gap-3 border-b border-emerald-100 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-brand-700 text-brand-gold flex items-center justify-center shadow">
-                        <i data-lucide="anchor" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-2xl font-bold text-brand-900">Chattogram Sea Port (BDCGP)</h3>
-                        <span class="text-xs text-slate-500">Ocean Freight Gate-In &bull; FCL / LCL Container Fleet</span>
-                    </div>
-                </div>
-                <div class="space-y-3 text-xs">
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Port of Singapore / Port Klang:</span><span class="font-bold text-brand-900 font-mono">~5 - 7 Days</span></div>
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Jebel Ali (Dubai), UAE:</span><span class="font-bold text-brand-900 font-mono">~14 - 16 Days</span></div>
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Jeddah Islamic Port, Saudi Arabia:</span><span class="font-bold text-brand-900 font-mono">~16 - 19 Days</span></div>
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">London Gateway / Southampton, UK:</span><span class="font-bold text-brand-900 font-mono">~24 - 28 Days</span></div>
-                    <div class="flex justify-between py-2"><span class="text-slate-600">New York / New Jersey, USA:</span><span class="font-bold text-brand-900 font-mono">~30 - 35 Days</span></div>
-                </div>
-            </div>
-
-            <!-- Air Freight -->
-            <div class="p-8 rounded-3xl bg-[#f8faf6] border border-emerald-100 shadow-sm space-y-6">
-                <div class="flex items-center gap-3 border-b border-emerald-100 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-brand-700 text-brand-gold flex items-center justify-center shadow">
-                        <i data-lucide="plane" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-2xl font-bold text-brand-900">Hazrat Shahjalal Int'l Airport (DAC)</h3>
-                        <span class="text-xs text-slate-500">Dedicated Cold-Chain Air Cargo Pallets</span>
-                    </div>
-                </div>
-                <div class="space-y-3 text-xs">
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Dubai / Abu Dhabi (DXB / AUH):</span><span class="font-bold text-emerald-800 font-mono">~5 - 6 Hours</span></div>
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Riyadh / Jeddah (RUH / JED):</span><span class="font-bold text-emerald-800 font-mono">~7 - 8 Hours</span></div>
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">London Heathrow (LHR):</span><span class="font-bold text-emerald-800 font-mono">~12 - 14 Hours</span></div>
-                    <div class="flex justify-between py-2 border-b border-emerald-100"><span class="text-slate-600">Frankfurt / Amsterdam (FRA / AMS):</span><span class="font-bold text-emerald-800 font-mono">~13 - 15 Hours</span></div>
-                    <div class="flex justify-between py-2"><span class="text-slate-600">Toronto Pearson (YYZ):</span><span class="font-bold text-emerald-800 font-mono">~20 - 24 Hours</span></div>
-                </div>
-            </div>
-        </div>
+<!-- ✦ PORT GATEWAYS ✦ -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline text-3xl text-brand-900">Export Port Gateways</h2>
     </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="glass-card-luxury rounded-2xl p-7 card-hover-organic reveal reveal-left">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-2xl">⚓</div>
+          <div><h3 class="font-serif text-xl font-bold text-brand-900">Chittagong Port (CGB)</h3><p class="text-xs text-slate-500">Bangladesh's Principal Sea Gateway</p></div>
+        </div>
+        <div class="space-y-2 text-xs">
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">UK / Europe</span><span class="font-bold text-brand-700">18–22 days</span></div>
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">UAE / Saudi Arabia</span><span class="font-bold text-brand-700">10–14 days</span></div>
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">USA / Canada</span><span class="font-bold text-brand-700">28–35 days</span></div>
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">Malaysia / Singapore</span><span class="font-bold text-brand-700">8–12 days</span></div>
+          <div class="flex justify-between py-2"><span class="text-slate-600 font-medium">Container Types</span><span class="font-bold text-slate-800">20ft FCL · 40ft FCL · LCL</span></div>
+        </div>
+      </div>
+      <div class="glass-card-luxury rounded-2xl p-7 card-hover-organic reveal reveal-right">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center text-2xl">✈️</div>
+          <div><h3 class="font-serif text-xl font-bold text-brand-900">Dhaka Airport (DAC)</h3><p class="text-xs text-slate-500">Air Cargo for Perishables & Express</p></div>
+        </div>
+        <div class="space-y-2 text-xs">
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">Himsagar Mango (GI)</span><span class="font-bold text-brand-700">Mandatory Air</span></div>
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">Transit to UK</span><span class="font-bold text-brand-700">48–72 hours</span></div>
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">Transit to UAE</span><span class="font-bold text-brand-700">24–36 hours</span></div>
+          <div class="flex justify-between border-b border-slate-100 py-2"><span class="text-slate-600 font-medium">Cold Chain</span><span class="font-bold text-slate-800">2–4°C Reefer Available</span></div>
+          <div class="flex justify-between py-2"><span class="text-slate-600 font-medium">Airlines Used</span><span class="font-bold text-slate-800">Biman · Qatar · Emirates</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Banking & Trade Finance Terms -->
-<section id="banking" class="py-20 bg-[#f8faf6]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-3">
-            <span class="text-xs uppercase tracking-widest font-extrabold text-emerald-800">Trade Finance Security</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Accepted Payment Terms &amp; Banking Framework</h2>
+<!-- ✦ INCOTERMS & BANKING ✦ -->
+<section id="banking" class="py-20 botanical-mesh-ivory">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="reveal reveal-left">
+        <h2 class="section-headline text-2xl text-brand-900 mb-6">Incoterms 2020 Options</h2>
+        <div class="space-y-4">
+          <div class="glass-card-luxury rounded-xl p-5 card-hover-organic">
+            <div class="flex items-center gap-3 mb-2"><span class="font-mono font-bold text-brand-700 text-sm px-2 py-0.5 bg-brand-50 rounded">FOB</span><span class="text-sm font-semibold text-slate-800">Free on Board — Chittagong</span></div>
+            <p class="text-xs text-slate-500 leading-relaxed">Seller responsible until goods are on board the vessel at Chittagong. Buyer arranges freight and insurance. Most common for experienced importers.</p>
+          </div>
+          <div class="glass-card-luxury rounded-xl p-5 card-hover-organic">
+            <div class="flex items-center gap-3 mb-2"><span class="font-mono font-bold text-blue-700 text-sm px-2 py-0.5 bg-blue-50 rounded">CFR</span><span class="text-sm font-semibold text-slate-800">Cost & Freight</span></div>
+            <p class="text-xs text-slate-500 leading-relaxed">Agrovia covers cost and freight to destination port. Buyer arranges marine insurance. Risk transfers at origin port.</p>
+          </div>
+          <div class="glass-card-luxury rounded-xl p-5 card-hover-organic">
+            <div class="flex items-center gap-3 mb-2"><span class="font-mono font-bold text-amber-700 text-sm px-2 py-0.5 bg-amber-50 rounded">CIF</span><span class="text-sm font-semibold text-slate-800">Cost, Insurance & Freight</span></div>
+            <p class="text-xs text-slate-500 leading-relaxed">Full coverage arrangement: Agrovia covers freight + marine insurance to buyer's named port. Recommended for first-time buyers.</p>
+          </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm space-y-3">
-                <div class="text-brand-gold font-bold text-xs uppercase tracking-wider">Primary Instrument</div>
-                <h3 class="font-serif text-xl font-bold text-brand-900">Confirmed Sight LC</h3>
-                <p class="text-xs text-slate-600 font-light leading-relaxed">
-                    Irrevocable, Confirmed Letter of Credit at Sight issued under ICC Uniform Customs and Practice (UCP 600) rules.
-                </p>
+      </div>
+      <div class="reveal reveal-right">
+        <h2 class="section-headline text-2xl text-brand-900 mb-6">Banking & Trade Finance</h2>
+        <div class="glass-card-luxury rounded-2xl p-6 space-y-4">
+          <div class="border-b border-slate-100 pb-4">
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Accepted Payment Methods</div>
+            <div class="space-y-2 text-xs">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span><span><strong>Sight Letter of Credit (LC)</strong> — UCP 600 compliant, irrevocable, confirmed. Preferred for first orders.</span></div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span><span><strong>Documents Against Payment (CAD/D/P)</strong> — For established relationships.</span></div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span><span><strong>Advance TT</strong> — 30% advance + 70% before shipping for trusted buyers.</span></div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span><span><strong>Open Account</strong> — Available with trade credit insurance for qualified buyers.</span></div>
             </div>
-            <div class="p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm space-y-3">
-                <div class="text-brand-gold font-bold text-xs uppercase tracking-wider">Fast Settlement</div>
-                <h3 class="font-serif text-xl font-bold text-brand-900">CAD (Cash Against Documents)</h3>
-                <p class="text-xs text-slate-600 font-light leading-relaxed">
-                    Documents routed through premier commercial banks (Standard Chartered, HSBC, or Eastern Bank PLC).
-                </p>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Standard Documentation</div>
+            <div class="flex flex-wrap gap-2 text-[10px]">
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Commercial Invoice</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Packing List</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Bill of Lading / AWB</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Certificate of Origin</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Phytosanitary Cert</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">SGS Inspection Report</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Halal Certificate</span>
+              <span class="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-semibold">Lab CoA</span>
             </div>
-            <div class="p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm space-y-3">
-                <div class="text-brand-gold font-bold text-xs uppercase tracking-wider">Air Shipments</div>
-                <h3 class="font-serif text-xl font-bold text-brand-900">Advance Wire Transfer (TT)</h3>
-                <p class="text-xs text-slate-600 font-light leading-relaxed">
-                    Standard 50% advance upon Proforma Invoice (PI) confirmation and 50% upon Airway Bill (AWB) issuance for fresh fruits.
-                </p>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
+<!-- ✦ SEASONAL AVAILABILITY CALENDAR ✦ -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold mb-3">Plan Your Procurement</p>
+      <h2 class="section-headline text-3xl text-brand-900">Seasonal Availability Calendar</h2>
+      <p class="text-sm text-slate-500 mt-3 max-w-xl mx-auto">Use this calendar for advance booking. We recommend placing orders 6–8 weeks before harvest peak for optimal pricing and availability.</p>
+    </div>
+    <div class="glass-card-luxury rounded-3xl overflow-hidden shadow-xl reveal">
+      <div class="overflow-x-auto">
+        <table class="w-full text-[11px]">
+          <thead>
+            <tr class="bg-gradient-to-r from-brand-800 to-brand-900 text-white">
+              <th class="py-3 px-4 text-left text-[10px] uppercase tracking-widest font-bold w-36">Commodity</th>
+              <th class="py-3 px-3 text-center font-bold">Jan</th><th class="py-3 px-3 text-center font-bold">Feb</th>
+              <th class="py-3 px-3 text-center font-bold">Mar</th><th class="py-3 px-3 text-center font-bold">Apr</th>
+              <th class="py-3 px-3 text-center font-bold">May</th><th class="py-3 px-3 text-center font-bold">Jun</th>
+              <th class="py-3 px-3 text-center font-bold">Jul</th><th class="py-3 px-3 text-center font-bold">Aug</th>
+              <th class="py-3 px-3 text-center font-bold">Sep</th><th class="py-3 px-3 text-center font-bold">Oct</th>
+              <th class="py-3 px-3 text-center font-bold">Nov</th><th class="py-3 px-3 text-center font-bold">Dec</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-100 hover:bg-amber-50/30 transition">
+              <td class="py-3 px-4 font-semibold text-amber-700">🍯 Honey</td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-amber-400 inline-block" title="Available"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-amber-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-amber-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block" title="Off-season"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-amber-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-amber-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-amber-400 inline-block"></span></td>
+            </tr>
+            <tr class="border-b border-slate-100 bg-slate-50/30 hover:bg-emerald-50/30 transition">
+              <td class="py-3 px-4 font-semibold text-brand-700">🌾 Rice</td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-emerald-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-emerald-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-emerald-400 inline-block"></span></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition">
+              <td class="py-3 px-4 font-semibold text-blue-700">🐟 Shukti</td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-blue-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-blue-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-blue-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-blue-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-blue-400 inline-block"></span></td>
+            </tr>
+            <tr class="border-b border-slate-100 bg-slate-50/30 hover:bg-yellow-50/30 transition">
+              <td class="py-3 px-4 font-semibold text-yellow-700">🥜 Peanuts</td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-yellow-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-yellow-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-yellow-400 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+            </tr>
+            <tr class="hover:bg-orange-50/30 transition">
+              <td class="py-3 px-4 font-semibold text-orange-700">🥭 Mango</td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-orange-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-orange-500 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+              <td class="py-3 px-3 text-center"><span class="w-4 h-4 rounded-full bg-slate-200 inline-block"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex flex-wrap items-center gap-6 text-[10px] text-slate-500">
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span> Peak Season / Harvest</div>
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span> Available (Stock)</div>
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-slate-200 inline-block"></span> Off-Season</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Global Footer (Rich Deep Emerald Base for Majestic Grounding) -->
+<!-- ✦ 8-COUNTRY EXPORT MARKETS STRIP ✦ -->
+<section class="py-10 bg-white border-y border-emerald-100 reveal">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Proudly Exporting To</p>
+    <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+      <div class="country-flag-item"><span class="flag-emoji">🇬🇧</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">UK</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇺🇸</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">USA</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇦🇪</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">UAE</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇸🇦</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">Saudi Arabia</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇪🇺</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">EU</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇨🇦</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">Canada</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇲🇾</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">Malaysia</span></div>
+      <div class="country-flag-item"><span class="flag-emoji">🇸🇬</span><span class="text-[10px] font-semibold text-slate-600 tracking-wide">Singapore</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ✦ PDF BROCHURE DOWNLOAD BANNER ✦ -->
+<section class="py-14 bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=60&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center;"></div>
+  <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold mb-3">B2B Procurement Resource</p>
+    <h2 class="section-headline text-2xl md:text-3xl text-white mb-4">Download Our Full Product Catalogue</h2>
+    <p class="text-sm text-emerald-200 mb-8 max-w-xl mx-auto">Lab certificates, packaging specs, Incoterms pricing, and shipping timelines — everything your sourcing team needs in one document.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="rfq.html?brochure=1" class="btn-brochure">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        Download Product Catalogue (PDF)
+      </a>
+      <a href="rfq.html?sample=1" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-900 font-bold text-sm transition duration-300">
+        🎁 Request Free Sample
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- ✦ GLOBAL FOOTER ✦ -->
     <footer class="bg-gradient-to-b from-brand-950 to-[#020d06] text-slate-300 border-t border-brand-800/60 pt-20 pb-12 relative overflow-hidden">
         <!-- Ambient decorative background glow -->
         <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -367,13 +779,18 @@
                         </div>
                     </div>
                     <p class="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
-                        Agrovia Organic is Bangladesh’s premier certified agricultural commodity export agency, connecting Sundarbans mangrove honey hunters, GI rice cultivators, and char farmers with global tier-1 food importers.
+                        Agrovia Organic is Bangladesh's premier certified agricultural commodity export agency, connecting Sundarbans mangrove honey hunters, GI rice cultivators, and char farmers with global tier-1 food importers.
                     </p>
                     <div class="pt-2 space-y-1.5 text-xs text-slate-400 font-light">
                         <div><strong class="text-slate-200 font-medium">Founder & MD:</strong> Pranto Sarker</div>
                         <div><strong class="text-slate-200 font-medium">Origin:</strong> Dhaka, Bangladesh 🇧🇩</div>
-                        <div><strong class="text-slate-200 font-medium">Regulatory Status:</strong> EPB / ERC / Trade License Registered Exporter</div>
+                        <div><strong class="text-slate-200 font-medium">Regulatory:</strong> EPB / ERC / Trade License Registered Exporter</div>
                     </div>
+                    <!-- Brochure Download CTA in Footer -->
+                    <a href="rfq.html?brochure=1" class="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg bg-brand-800 border border-brand-gold/30 text-brand-gold hover:bg-brand-700 transition text-xs font-semibold">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Download Product Catalogue</span>
+                    </a>
                 </div>
 
                 <!-- Commodities -->
@@ -441,23 +858,77 @@
         </div>
     </footer>
 
-    <!-- Floating Concierge WhatsApp Widget -->
+    <!-- Floating WhatsApp Widget -->
     <a href="https://wa.me/8801700000000?text=Hello%20Agrovia%20Organic,%20I%20am%20interested%20in%20sourcing%20agricultural%20commodities." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-2xl bg-gradient-to-tr from-emerald-700 to-emerald-600 text-white shadow-2xl shadow-emerald-950/40 hover:scale-110 transition duration-300 flex items-center gap-2.5 group border border-emerald-400/40">
         <i data-lucide="message-circle" class="w-6 h-6"></i>
         <span class="text-xs font-bold tracking-wide hidden group-hover:inline-block pr-1 transition-all duration-300">WhatsApp Trade Desk</span>
     </a>
 
-    <!-- Scripts -->
+    <!-- Global Scripts -->
     <script>
         lucide.createIcons();
+        // Mobile menu
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
+
+        // Scroll Reveal (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        if (revealElements.length > 0) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            revealElements.forEach(el => revealObserver.observe(el));
+        }
+
+        // Certificate Lightbox
+        function openCertLightbox(certId) {
+            const overlay = document.getElementById('cert-lightbox-overlay');
+            const content = document.getElementById('cert-lightbox-content');
+            if (!overlay || !content) return;
+            const certData = window.certDetails && window.certDetails[certId];
+            if (certData) {
+                content.innerHTML = `
+                    <button onclick="closeCertLightbox()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 font-bold text-lg transition">&times;</button>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">${certData.icon}</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-brand-900">${certData.name}</h3>
+                                <p class="text-xs text-slate-500 font-medium">${certData.issuer}</p>
+                            </div>
+                        </div>
+                        <div class="h-0.5 bg-gradient-to-r from-brand-700 to-brand-gold opacity-30 rounded"></div>
+                        <p class="text-sm text-slate-700 leading-relaxed">${certData.description}</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            ${certData.specs.map(s => `<div class="bg-emerald-50 rounded-lg p-3 border border-emerald-100"><div class="text-[10px] font-bold uppercase tracking-widest text-brand-700 mb-1">${s.label}</div><div class="text-sm font-semibold text-slate-800">${s.value}</div></div>`).join('')}
+                        </div>
+                        <div class="bg-amber-50 border border-brand-gold/30 rounded-xl p-4">
+                            <p class="text-xs text-amber-800 font-medium">✦ This certification is verified by independent third-party auditors. Original certificate copies are available on request for qualified B2B buyers.</p>
+                        </div>
+                        <a href="rfq.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition">Request Certificate Copies →</a>
+                    </div>
+                `;
+            }
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCertLightbox() {
+            const overlay = document.getElementById('cert-lightbox-overlay');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        // Close on backdrop click
+        document.addEventListener('click', function(e) {
+            const overlay = document.getElementById('cert-lightbox-overlay');
+            if (overlay && e.target === overlay) closeCertLightbox();
+        });
     </script>
 </body>
 </html>
-
